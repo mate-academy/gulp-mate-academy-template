@@ -7,6 +7,7 @@ const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const colors = require('colors');
+const gulpReplacePath = require('gulp-replace-path');
 
 const gulpStylelint = require('gulp-stylelint');
 const gulpHtmllint = require('gulp-htmllint');
@@ -68,6 +69,7 @@ gulp.task('processStyles', series('lintCss', function() {
   return gulp.src(stylesBlob)
     .pipe(sourcemaps.init())
     .pipe(sass())
+    .pipe(gulpReplacePath(/(?:\.\.\/){2,}images/g, '../images'))
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
     }))
