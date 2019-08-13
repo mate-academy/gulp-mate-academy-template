@@ -1,18 +1,16 @@
 
-
-@media only screen and (max-width: 1024px){
+@media only screen and (max-width: 1024px) {
   .box-content {
     max-width: 96%;
   }
 
-.menue {
-  justify-content:space-between;
+  .menue {
+    justify-content: space-between;
+  }
 
-}
-
-.menue__item {
-  width: 48%;
-}
+  .menue__item {
+    width: 48%;
+  }
 
   .footer__info ul:nth-child(2) {
     width: 170px;
@@ -21,7 +19,6 @@
   .footer__info ul:last-child {
     width: 120px;
   }
-
 }
 
 @media only screen and (max-width: 640px) {
@@ -47,7 +44,7 @@
   }
 
   .menue__item {
-  width: 90%;
+    width: 90%;
   }
 
   .inits_button {
@@ -65,16 +62,15 @@
     margin-bottom: 0;
   }
 
-.footer__end {
-  flex-direction: column;
-  align-items: end;
-  font-size: 11px;
-  padding: 40px 0;
-  height: 167px;
-}
+  .footer__end {
+    flex-direction: column;
+    align-items: end;
+    font-size: 11px;
+    padding: 40px 0;
+    height: 167px;
+  }
 
-.footer__end a{
-  padding-bottom: 24px;
-}
-
+  .footer__end a{
+    padding-bottom: 24px;
+  }
 }
