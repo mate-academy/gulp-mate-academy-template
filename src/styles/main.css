@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-weight: normal;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.box-content {
+  max-width: 956px;
+  margin: 0 auto;
+}
+
+header {
+  box-shadow: 0 0 16px rgba(38, 38, 38, 0.16);
+  font-size: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 72px;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo span {
+  font-weight: normal;
+  color: #57ad56;
+}
+
+.asap {
+  display: flex;
+}
+
+.button:hover {
+  color: #fff;
+  background: #262626;
+  cursor: pointer;
+}
+
+.filead {
+  display: inline-block;
+  text-align: center;
+  font-weight: normal;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 2px;
+  padding: 12px 8px;
+}
+
+.asap__button {
+  background-color: #fff;
+  padding: 0 12px;
+}
+
+.asap__text {
+  padding: 12px 8px;
+  color: #626262;
+}
+
+.asap__adres {
+  display: flex;
+  align-items: center;
+}
+
+.asap__adres input {
+  display: inline-block;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+}
+
+.asap__adres input:focus {
+  outline: none;
+}
+
+.inits_button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.search {
+  display: flex;
+  border-bottom: 1px solid rgba(117, 117, 117, 0.3);
+}
+
+.search img {
+  padding: 40px 0 15px;
+}
+
+.search__input {
+  border: none;
+  opacity: 0.5;
+  font-size: 16px;
+  padding: 40px 0 15px 10px;
+
+}
+
+.search__input:focus {
+  outline: none;
+}
+
+h1 {
+  margin-top: 56px;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 34px;
+}
+
+.menue {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menue__item {
+  width: 30%;
+  margin: 16px 0;
+}
+
+.menue__item img {
+  width: 100%;
+}
+
+.menue__item__restaurant {
+  padding: 16px 0 4px;
+}
+
+.menue__item__tag {
+  font-size: 14px;
+  color: #626262;
+}
+
+.one__tag::before {
+  content: "₴";
+}
+
+.double__tag::before {
+  content: "₴₴";
+}
+
+.menue__item__tag li {
+  list-style: none;
+  display: inline-block;
+}
+
+.menue__item__tag li::before {
+  content: "•";
+}
+
+.menue__item__time {
+  padding: 4px 0 0;
+  margin-bottom: 20px;
+}
+
+footer {
+  background: #262626;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
+}
+
+.footer__logo {
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 2px solid rgba(117, 117, 117, 0.4);
+}
+
+.footer__logo .logo {
+  font-size: 26px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+
+.footer__info {
+  border-bottom: 2px solid rgba(117, 117, 117, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.footer__info ul {
+  margin-top: 32px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.footer__info ul li {
+  display: inline-block;
+  width: 227px;
+  margin-top: 23px;
+}
+
+.select__lang {
+  font-size: 13px;
+  border-radius: 2px;
+  background: #3b3b3b;
+  width: 227px;
+}
+
+.select__lang select {
+  color: #fff;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  margin-left: 32px;
+  border: none;
+  height: 40px;
+  letter-spacing: 2px;
+}
+
+select:focus {
+  background-color: #3b3b3b;
+  outline: none;
+}
+
+.globe {
+  position: relative;
+  left: 16px;
+  top: 4px;
+}
+
+.arr__down {
+  position: relative;
+  right: -35px;
+}
+
+.logo__tag span {
+  color: #49a144;
+}
+
+.soc__tag a {
+  margin-right: 20px;
+}
+
+.footer__stores {
+  border-bottom: 2px solid rgba(117, 117, 117, 0.4);
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__stores a:first-child {
+  margin-right: 20px;
+}
+
+.footer__stores a:last-child {
+  margin-left: 20px;
+}
+
+.footer__end {
+  height: 93px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__end a:last-child {
+  margin-right: 30%;
+}
+
+.button__up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  background: #59bd5a;
+  border-radius: 2px;
+  position: fixed;
+  bottom: 24px;
+  right: 16px;
+}
