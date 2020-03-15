@@ -1,7 +1,70 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+@import "values";
+@import "resetStyles";
+@import "header";
+@import "order";
+@import "reviews";
+@import "hosted";
+@import "footer";
+@import "form";
 
-body {
-  background: $c-gray;
+@font-face {
+  font-family: Avenir; /* Гарнитура шрифта */
+  src: url("./../fonts/Avenir-Book.ttf"); /* Путь к файлу со шрифтом */
+}
+
+@keyframes lineUnderLink {
+  from {
+    transform: translateX(0);
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+    transform: translateX(100);
+  }
+}
+
+.body {
+  margin: 0;
+  font-family: Avenir, sans-serif;
+  color: $font_color_grey;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 900px;
+  display: grid;
+  margin: 40px auto 75px;
+  column-gap: 80px;
+  grid-template-columns: 1fr 330px;
+}
+
+.section {
+  margin-bottom: 70px;
+}
+
+.topic {
+  font-size: 1.75em;
+}
+
+.order__link {
+  transition: color 0.3s;
+  position: relative;
+  h3 {
+    display: inline;
+  }
+  &:hover {
+    &:after {
+      content: "";
+      width: 0%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 2px;
+      background-color: $font_color_pink;
+      border-radius: 8px;
+      animation: lineUnderLink 0.3s linear both;
+    }
+    color: $font_color_pink;
+  }
 }

@@ -1,0 +1,41 @@
+@import "values";
+
+.form {
+  border: 1px solid #e1e7ed;
+  box-sizing: border-box;
+  border-radius: 3px;
+  &__price {
+    font-weight: 300;
+    margin-bottom: 40px;
+  }
+
+  &__block {
+    margin: 30px 30px 40px;
+
+    &--area {
+      width: 100%;
+      border: 1px solid #e1e7ed;
+      box-sizing: border-box;
+      border-radius: 3px;
+      padding: 14px 17px;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__btn {
+    border: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    padding: 15px;
+    background-color: $font_color_pink;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s, border 0.3s;
+    &:hover {
+      background-color: white;
+      color: $font_color_pink;
+      border: 1px solid $font_color_pink;
+    }
+  }
+}

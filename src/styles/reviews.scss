@@ -1,0 +1,25 @@
+.reviews {
+  &__topic {
+    margin-bottom: 40px;
+  }
+  &__item {
+    margin-bottom: 35px;
+    .name {
+      font-size: 1.25em;
+    }
+    .date {
+      font-size: 0.88em;
+    }
+    &--info {
+      display: flex;
+      margin-bottom: 25px;
+      .photo {
+        margin-right: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #c4c4c4;
+      }
+    }
+  }
+}
