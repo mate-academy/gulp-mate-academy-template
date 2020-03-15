@@ -1,0 +1,27 @@
+.order__title {
+  font-size: 2.25em; }
+  .order__title--under {
+    margin: 25px 0;
+    color: #687c94; }
+
+.order__text {
+  margin: 30px 0;
+  line-height: 24px; }
+
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .filter__item {
+    margin-right: 30px; }
+
+.amenities {
+  margin-bottom: 20px; }
+  .amenities__topic {
+    font-size: 1.25em;
+    margin: 50px 0 25px; }
+  .amenities__block {
+    display: grid;
+    grid-template-columns: 10em 10em; }
+
+/*# sourceMappingURL=order.css.map */

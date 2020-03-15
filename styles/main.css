@@ -1,14 +1,242 @@
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400; }
+@charset "UTF-8";
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
+a {
+  color: #3d4e61;
+  text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: 1em;
+  margin: 0; }
+
+.header__logo {
+  width: 30px;
+  height: 30px;
+  margin: 5px; }
+
+.header__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.header__background img {
+  width: 100%; }
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 300px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  .nav__item {
+    white-space: nowrap;
+    padding: 5px 15px; }
+    .nav__item:hover {
+      font-size: 1.2em; }
+
+.profile {
+  width: 30px;
+  height: 30px;
+  padding-right: 20px; }
+
+.order__title {
+  font-size: 2.25em; }
+  .order__title--under {
+    margin: 25px 0;
+    color: #687c94; }
+
+.order__text {
+  margin: 30px 0;
+  line-height: 24px; }
+
+.filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .filter__item {
+    margin-right: 30px; }
+
+.amenities {
+  margin-bottom: 20px; }
+  .amenities__topic {
+    font-size: 1.25em;
+    margin: 50px 0 25px; }
+  .amenities__block {
+    display: grid;
+    grid-template-columns: 10em 10em; }
+
+.reviews__topic {
+  margin-bottom: 40px; }
+
+.reviews__item {
+  margin-bottom: 35px; }
+  .reviews__item .name {
+    font-size: 1.25em; }
+  .reviews__item .date {
+    font-size: 0.88em; }
+  .reviews__item--info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 25px; }
+    .reviews__item--info .photo {
+      margin-right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-color: #c4c4c4; }
+
+.hosted__topic--under {
+  font-size: 0.88em;
+  margin: 15px 0 20px; }
+
+.hosted__topic--text {
+  margin-bottom: 30px; }
+
+.hosted__btn {
+  font-weight: 600;
+  padding: 15px 25px;
+  color: #118488;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #118488;
+  border-radius: 4px;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s; }
+  .hosted__btn:hover {
+    color: white;
+    background-color: #118488; }
+
+.footer {
+  display: grid;
+  width: 100%;
+  -webkit-box-shadow: 0 -1px 0 #e1e7ed;
+          box-shadow: 0 -1px 0 #e1e7ed;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin-bottom: 35px; }
+  .footer__item--topic {
+    margin: 45px 0 20px; }
+  .footer__item a h5 {
+    font-weight: 300;
+    margin-bottom: 10px; }
+
+.form {
+  border: 1px solid #e1e7ed;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 3px; }
+  .form__price {
+    font-weight: 300;
+    margin-bottom: 40px; }
+  .form__block {
+    margin: 30px 30px 40px; }
+    .form__block--area {
+      width: 100%;
+      border: 1px solid #e1e7ed;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      border-radius: 3px;
+      padding: 14px 17px;
+      margin-bottom: 1em; }
+  .form__btn {
+    border: none;
+    font-size: 1em;
+    color: white;
+    font-weight: 600;
+    width: 100%;
+    padding: 15px;
+    background-color: #fd5c63;
+    border-radius: 4px;
+    -webkit-transition: color 0.3s, background-color 0.3s, border 0.3s;
+    transition: color 0.3s, background-color 0.3s, border 0.3s; }
+    .form__btn:hover {
+      background-color: white;
+      color: #fd5c63;
+      border: 1px solid #fd5c63; }
 
 @font-face {
-  font-family: "Roboto";
-  src: url("../fonts/Roboto-Regular-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
+  font-family: Avenir;
+  /* Гарнитура шрифта */
+  src: url("./../fonts/Avenir-Book.ttf");
+  /* Путь к файлу со шрифтом */ }
 
-body {
-  background: #eee; }
+@-webkit-keyframes lineUnderLink {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 0; }
+  to {
+    width: 100%;
+    -webkit-transform: translateX(100);
+            transform: translateX(100); } }
+
+@keyframes lineUnderLink {
+  from {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    width: 0; }
+  to {
+    width: 100%;
+    -webkit-transform: translateX(100);
+            transform: translateX(100); } }
+
+.body {
+  margin: 0;
+  font-family: Avenir, sans-serif;
+  color: #3d4e61;
+  font-size: 16px; }
+
+.container {
+  max-width: 900px;
+  display: grid;
+  margin: 40px auto 75px;
+  -webkit-column-gap: 80px;
+     -moz-column-gap: 80px;
+          column-gap: 80px;
+  grid-template-columns: 1fr 330px; }
+
+.section {
+  margin-bottom: 70px; }
+
+.topic {
+  font-size: 1.75em; }
+
+.order__link {
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  position: relative; }
+  .order__link h3 {
+    display: inline; }
+  .order__link:hover {
+    color: #fd5c63; }
+    .order__link:hover:after {
+      content: "";
+      width: 0%;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 2px;
+      background-color: #fd5c63;
+      border-radius: 8px;
+      -webkit-animation: lineUnderLink 0.3s linear both;
+              animation: lineUnderLink 0.3s linear both; }
 
 /*# sourceMappingURL=main.css.map */

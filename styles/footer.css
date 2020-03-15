@@ -1,0 +1,15 @@
+.footer {
+  display: grid;
+  width: 100%;
+  -webkit-box-shadow: 0 -1px 0 #e1e7ed;
+          box-shadow: 0 -1px 0 #e1e7ed;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin-bottom: 35px; }
+  .footer__item--topic {
+    margin: 45px 0 20px; }
+  .footer__item a h5 {
+    font-weight: 300;
+    margin-bottom: 10px; }
+
+/*# sourceMappingURL=footer.css.map */
