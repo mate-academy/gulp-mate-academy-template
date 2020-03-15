@@ -1,0 +1,22 @@
+.hosted__topic--under {
+  font-size: 0.88em;
+  margin: 15px 0 20px; }
+
+.hosted__topic--text {
+  margin-bottom: 30px; }
+
+.hosted__btn {
+  font-weight: 600;
+  padding: 15px 25px;
+  color: #118488;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #118488;
+  border-radius: 4px;
+  -webkit-transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s; }
+  .hosted__btn:hover {
+    color: white;
+    background-color: #118488; }
+
+/*# sourceMappingURL=hosted.css.map */
