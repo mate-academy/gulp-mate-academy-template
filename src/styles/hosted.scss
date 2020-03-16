@@ -1,0 +1,26 @@
+@import "values";
+
+.hosted {
+  &__topic {
+    &--under {
+      font-size: 0.88em;
+      margin: 15px 0 20px;
+    }
+    &--text {
+      margin-bottom: 30px;
+    }
+  }
+  &__btn {
+    font-weight: 600;
+    padding: 15px 25px;
+    color: $font_color_btn;
+    box-sizing: border-box;
+    border: 1px solid $font_color_btn;
+    border-radius: 4px;
+    transition: color 0.3s, background-color 0.3s;
+    &:hover {
+      color: white;
+      background-color: $font_color_btn;
+    }
+  }
+}
