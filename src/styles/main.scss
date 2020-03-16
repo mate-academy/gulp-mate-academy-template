@@ -48,7 +48,7 @@
 }
 
 .order__link {
-  transition: color 0.3s;
+  transition: color 0.1s;
   position: relative;
   h3 {
     display: inline;
@@ -63,8 +63,10 @@
       height: 2px;
       background-color: $font_color_pink;
       border-radius: 8px;
-      animation: lineUnderLink 0.3s linear both;
+      animation: lineUnderLink 0.1s linear both;
     }
     color: $font_color_pink;
   }
 }
+
+@import "media";

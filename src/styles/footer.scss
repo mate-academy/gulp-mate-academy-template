@@ -9,11 +9,11 @@
   &__item {
 
     &--topic {
+      font-weight: bold;
       margin: 45px 0 20px;
     }
 
-    a h5 {
-      font-weight: 300;
+    &--text {
       margin-bottom: 10px;
     }
   }

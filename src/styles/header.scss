@@ -1,4 +1,7 @@
+@import "values";
+
 .header {
+
   &__logo {
     width: 30px;
     height: 30px;
@@ -8,6 +11,8 @@
   &__block {
     display: flex;
     justify-content: space-between;
+    //position: fixed;
+    //top: 0;
   }
 
   &__background img {
@@ -23,9 +28,9 @@
   &__item {
     white-space: nowrap;
     padding: 5px 15px;
-
-    &:hover {
-      font-size: 1.2em;
+    transition: color 0.1s;
+    &:hover a {
+      color: $font_color_pink;
     }
   }
 }

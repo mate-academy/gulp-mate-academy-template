@@ -5,9 +5,9 @@
   <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>qwe</title>
+  <title>Airbnb</title>
   <link rel="stylesheet" href="./styles/main.css">
-
+  <link rel="shortcut icon" href="./images/Airbnb_icon-icons.com_66791.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap&subset=cyrillic" rel="stylesheet">
 </head>
 <body class="body">
@@ -15,21 +15,23 @@
 <header class="header">
   <div class="header__block">
     <div class="header__logo">
-      <img src="./images/Rectangle%202.png" alt="logo_airbnb">
+      <a href="">
+        <img src="./images/Rectangle%202.png" alt="logo_airbnb">
+      </a>
     </div>
     <nav class="header__nav">
       <ul class="nav">
-        <li class="nav__item">
+        <li class="nav__item order__link">
           <a href="#">
             Become a host
           </a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item order__link">
           <a href="#">
             Trips
           </a>
         </li>
-        <li class="nav__item">
+        <li class="nav__item order__link">
           <a href="#">
             Messages
           </a>
@@ -149,12 +151,12 @@
         <a class="hosted__btn" href="#">Contact Host</a>
       </article>
     </section>
-    <section>
+    <section class="forms">
       <form class="form" action="url" method="get">
         <div class="form__block">
           <h3 class="form__price">25$ per night</h3>
-          <input tabindex="1" class="form__block--area" maxlength="40" required placeholder="Date" type="text">
-          <input tabindex="1" class="form__block--area" maxlength="40" required placeholder="Guests" type="text">
+          <input tabindex="1" class="form__block--area" maxlength="40" required placeholder="Date" type="number">
+          <input tabindex="1" class="form__block--area" maxlength="40" required placeholder="Guests" type="number">
           <button tabindex="1" class="form__btn">Book</button>
         </div>
       </form>
@@ -165,76 +167,76 @@
 <footer>
   <div class="footer">
     <div class="footer__block">
-      <div class="footer__item">
-        <a href="#">
-          <h3 class="footer__item--topic">
-            Airbnb
-          </h3>
+      <ul class="footer__item">
+        <li class="footer__item--topic">
+        <a href="#" class="order__link">
+          Airbnb
         </a>
-        <a href="#">
-          <h5>
+        </li>
+        <li class="footer__item--text">
+          <a href="#" class="order__link">
             About
-          </h5>
-        </a>
-        <a href="#">
-        <h5>
-          Press
-        </h5>
-      </a>
-        <a href="#">
-        <h5>
-          Help
-        </h5>
-      </a>
-      </div>
+          </a>
+        </li>
+        <li class="footer__item--text">
+          <a href="#" class="order__link">
+            Help
+          </a>
+        </li>
+        <li class="footer__item--text">
+          <a href="#" class="order__link">
+            Press
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="footer__block">
-      <div class="footer__item">
-        <a href="#">
-          <h3 class="footer__item--topic">
+      <ul class="footer__item">
+        <li class="footer__item--topic">
+          <a href="#" class="order__link">
             Discover
-          </h3>
-        </a>
-        <a href="#">
-          <h5>
+          </a>
+        </li>
+        <li class="footer__item--text">
+          <a href="#" class="order__link">
             Travel credit
-          </h5>
-        </a>
-        <a href="#">
-          <h5>
+          </a>
+        </li>
+        <li class="footer__item--text">
+          <a href="#" class="order__link">
             Business
-          </h5>
-        </a>
-        <a href="#">
-          <h5>
-            Guidebook
-          </h5>
-        </a>
-      </div>
+          </a>
+        </li>
+        <li class="footer__item--text">
+          <a href="#" class="order__link">
+            Guidebooks
+          </a>
+        </li>
+      </ul>
     </div>
     <div class="footer__block">
-      <div class="footer__item">
-        <a href="#">
-          <h3 class="footer__item--topic">
+      <ul class="footer__item">
+        <li class="footer__item--topic">
+          <a href="#" class="order__link">
             Hosting
-          </h3>
-        </a>
-        <a href="#">
-          <h5>
+          </a>
+        </li>
+        <li class="footer__item--text">
+          <a href="#" class="order__link">
             Why host
-          </h5>
-        </a>
-        <a href="#">
-          <h5>
+          </a>
+        </li>
+        <li class="footer__item--text">
+          <a href="#" class="order__link">
             Hospitality
-          </h5>
-        </a>
-        <a href="#">
-          <h5>
+          </a>
+        </li>
+        <li class="footer__item--text">
+          <a href="#" class="order__link">
             Community
-          </h5>
-        </a>
-      </div>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </footer>

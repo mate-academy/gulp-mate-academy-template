@@ -1,0 +1,28 @@
+@media (max-width: 1070px) {
+  .container {
+    margin: 40px 100px 75px;
+  }
+}
+
+@media (max-width: 950px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .forms {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 770px) {
+  .container {
+    margin: 40px 50px 75px;
+  }
+}
+
+@media (max-width: 520px) {
+  .body {
+    font-size: 12px;
+  }
+}
