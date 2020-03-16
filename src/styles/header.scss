@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffff;
+  box-shadow: 0 1px 0 #e1e7ed;
+  height: 60px;
+
+  &__logo {
+    width: 40px;
+    padding: 15px 26px;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__headshot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 15px;
+  }
+}
