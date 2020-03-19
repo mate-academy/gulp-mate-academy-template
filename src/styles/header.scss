@@ -1,0 +1,108 @@
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: 1;
+  height: 60px;
+  margin: 0;
+  background-color: white;
+  box-shadow: 0 1px 0 #e1e7ed;
+
+  &__toggler {
+    display: none;
+  }
+
+  &__nav {
+    display: flex;
+    margin-right: 87px;
+    height: 100%;
+    transition: 1s;
+    transform-origin: right top;
+
+    @media screen and (max-width: 500px) {
+      background-color: rgba(#fd5c63, 1);
+      color: white;
+      position: absolute;
+      z-index: 0;
+      top: 60px;
+      width: 100vw;
+      flex-direction: column;
+      height: calc(100vh - 60px);
+      transform: rotate(-90deg);
+      align-items: center;
+    }
+  }
+
+  &__label {
+    display: none;
+    height: 30px;
+    width: 30px;
+    background-image: url(../images/burger.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media screen and (max-width: 500px) {
+      display: block;
+      position: absolute;
+      top: calc(50% - 15px);
+      left: calc(50% - 15px);
+    }
+  }
+
+  &__toggler:checked ~ .header__nav {
+    transform: rotate(0);
+  }
+
+  &__toggler:checked ~ .header__label {
+    background-image: url(../images/cross.svg);
+  }
+
+  &__logo {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 26px;
+  }
+
+  &__link {
+    display: block;
+    font-family: Avenir, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: auto 15px;
+    text-decoration: none;
+    outline: none;
+    transition: color 0.5s;
+    color: #3d4e61;
+    &:hover,
+    &:focus {
+      color: #fd5c63;
+      @media screen and (max-width: 500px) {
+        color: rgb(91, 91, 236);
+      }
+
+    }
+    @media screen and (max-width: 500px) {
+      font-family: Avenir, sans-serif;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      margin: 6vh 0;
+
+    }
+  }
+
+  &__photo {
+    position: absolute;
+    right: 19px;
+    top: calc(50% - 15px);
+    width: 30px;
+    height: 30px;
+    margin: auto 19px auto 23px;
+  }
+}
