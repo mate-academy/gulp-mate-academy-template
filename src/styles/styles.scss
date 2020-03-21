@@ -23,6 +23,10 @@
   src: url(../fonts/Avenir-Heavy.ttf);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-size: 16px;
   line-height: 19px;
@@ -37,7 +41,7 @@ body {
 }
 
 .content {
-  width: 901px;
+  max-width: 901px;
   margin: 39px auto;
 
   @media screen and (max-width: 900px) {

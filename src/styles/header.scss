@@ -11,6 +11,15 @@
   background-color: white;
   box-shadow: 0 1px 0 #e1e7ed;
 
+  &__container {
+    max-width: 950px;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+  }
+
   &__toggler {
     display: none;
   }
@@ -19,19 +28,18 @@
     display: flex;
     margin-right: 87px;
     height: 100%;
-    transition: 1s;
-    transform-origin: right top;
+    transition: 1s cubic-bezier(0.62, 1.96, 0.3, 0.31);
+    transform-origin: top;
 
     @media screen and (max-width: 500px) {
       background-color: rgba(#fd5c63, 1);
       color: white;
       position: absolute;
-      z-index: 0;
-      top: 60px;
+      top: 30px;
       width: 100vw;
       flex-direction: column;
       height: calc(100vh - 60px);
-      transform: rotate(-90deg);
+      transform: translateY(130vh);
       align-items: center;
     }
   }
@@ -54,7 +62,7 @@
   }
 
   &__toggler:checked ~ .header__nav {
-    transform: rotate(0);
+    transform: translateY(0);
   }
 
   &__toggler:checked ~ .header__label {

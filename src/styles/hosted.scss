@@ -24,6 +24,7 @@
     font-size: 20px;
     transition: background-color 0.5s, color 0.5s, box-shadow 0.5s;
     outline: none;
+    cursor: pointer;
 
     &:hover {
       background-color: #118488;

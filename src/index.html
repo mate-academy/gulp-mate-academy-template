@@ -11,24 +11,27 @@
 
 <body>
   <header class="header">
-    <img class="header__logo" src="./images/Rectangle 2.jpg" alt="Logo AirBnB">
-
-    <input class="header__toggler" type="checkbox" id="header__toggler">
-    <label class="header__label" for="header__toggler"></label>
-    <nav class="header__nav">
-      <a class="header__link" href="#">
-        Become a host
+    <div class="header__container">
+      <a href="#">
+        <img class="header__logo" src="./images/Rectangle 2.jpg" alt="Logo AirBnB">
       </a>
-      <a class="header__link" href="#">
-        Trips
+      <input class="header__toggler" type="checkbox" id="header__toggler">
+      <label class="header__label" for="header__toggler"></label>
+      <nav class="header__nav">
+        <a class="header__link" href="#hosted">
+          Become a host
+        </a>
+        <a class="header__link" href="#reviews">
+          Trips
+        </a>
+        <a class="header__link" href="#">
+          Messages
+        </a>
+      </nav>
+      <a href="#">
+        <img class="header__photo" src="./images/Ellipse.jpg" alt="User Photo">
       </a>
-      <a class="header__link" href="#">
-        Messages
-      </a>
-
-
-    </nav>
-    <img class="header__photo" src="./images/Ellipse.jpg" alt="User Photo">
+    </div>
   </header>
 
   <section class="promo">
@@ -79,7 +82,7 @@
       </a>
     </div>
 
-    <div class="reviews content__reviews">
+    <div class="reviews content__reviews" id="reviews">
       <h2 class="reviews__title">
         Reviews
       </h2>
@@ -105,15 +108,15 @@
 
       <article class="reviews__block">
         <div class="reviews__container">
-        <p class="reviews__circle"></p>
-        <div class="reviews__subcontainer">
-        <p class="reviews__name">
-          John
-        </p>
-        <p class="reviews__date">
-          September 2017
-        </p>
-        </div>
+          <p class="reviews__circle"></p>
+          <div class="reviews__subcontainer">
+            <p class="reviews__name">
+              John
+            </p>
+            <p class="reviews__date">
+              September 2017
+            </p>
+          </div>
         </div>
         <p class="reviews__review">
           Sed do eiusmod tempor incididunt ut labore et
@@ -122,7 +125,7 @@
       </article>
     </div>
 
-    <article class="hosted content__hosted">
+    <article class="hosted content__hosted" id="hosted">
       <h2 class="hosted__title">Hosted by Jane</h2>
       <p class="hosted__were">Budapest, Hungary</p>
       <p class="hosted__article">
@@ -157,8 +160,9 @@
         <a class="footer__link" href="">Hospitality</a>
         <a class="footer__link" href="">Community</a>
       </div>
-      </div>
+    </div>
   </footer>
 
 </body>
+
 </html>
