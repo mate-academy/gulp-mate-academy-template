@@ -22,3 +22,10 @@ body {
   width: 100%;
   object-fit: cover;
 }
+
+a {
+  outline: none;
+  &:focus {
+    border: 1px solid gray;
+  }
+}

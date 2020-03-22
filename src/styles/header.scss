@@ -5,22 +5,20 @@
   background: #ffff;
   box-shadow: 0 1px 0 #e1e7ed;
   height: 60px;
-
+  @media screen and (min-width: 1600px) {
+    width: 1600px;
+    margin: 0 auto;
+  }
   &__logo {
     width: 40px;
     padding: 15px 26px;
+    outline: none;
+    cursor: pointer;
   }
 
   &__nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-
-  &__headshot {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    padding: 15px;
   }
 }
