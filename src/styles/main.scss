@@ -1,7 +1,14 @@
-@import "utils";
-@import "fonts";
-@import "typography";
+.main {
+  padding: 10px 50px;
+}
 
-body {
-  background: $c-gray;
+.container {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
 }

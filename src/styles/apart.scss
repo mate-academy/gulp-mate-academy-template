@@ -1,0 +1,104 @@
+.apart {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0 0 80px;
+  width: 450px;
+  @media screen and (max-width: 1200px) {
+    margin: 0 auto;
+   
+  }
+  &__article {
+    margin: 0;
+  }
+
+  &__entire {
+    color: #687c94;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+  }
+
+  &__description {
+    margin-top: 40px;
+  }
+
+  &__host {
+    font-weight: bold;
+  }
+
+  &__amenities {
+    margin-top: 30px;
+  }
+
+  &__amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 176px);
+    grid-template-rows: repeat(2, 38px);
+  }
+
+  &__amenities-show {
+    margin-top: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: bold;
+    color: #3d4e61;
+    cursor: pointer;
+    &:hover {
+      color: rgba(61, 78, 97, 0.8);
+    }
+  }
+
+  &__reviews {
+    margin-top: 40px;
+  }
+
+  &__user {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 15px;
+    // grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__user-photo {
+    background: #c4c4c4;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+  }
+
+  &__user-info {
+    margin: 0 15px;
+  }
+
+  &__user-John {
+    font-weight: bold;
+    margin: 0;
+  }
+
+  &__user-date {
+    margin: 0;
+  }
+
+  &__hosted {
+    font-family: Roboto, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    margin-top: 60px;
+    margin-bottom: 5px;
+  }
+
+  &__town {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &__host-content {
+    margin: 15px 0 25px;
+  }
+}

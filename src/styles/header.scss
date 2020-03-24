@@ -1,0 +1,27 @@
+.header {
+  padding: 0 100px;
+  background: #ffff;
+  box-shadow: 0 1px 0 #e1e7ed;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    width: 40px;
+    padding: 15px 26px;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

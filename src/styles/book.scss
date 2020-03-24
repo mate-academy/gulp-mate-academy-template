@@ -1,0 +1,55 @@
+.book {
+  display: grid;
+  justify-content: center;
+  margin: 40px;
+  padding: 28px;
+  box-sizing: border-box;
+  width: 330px;
+  height: 319px;
+  border: 1px solid #e1e7ed;
+
+  @media screen and (max-width: 1200px) {
+    margin: 40px auto;
+  }
+  &__price {
+    display: inline;
+    box-sizing: border-box;
+    margin: 0 0 20px;
+  }
+
+  &__search {
+    width: 270px;
+    height: 50px;
+    padding: 17px;
+    font-family: Avenir, serif;
+    font-size: 16px;
+    border: 1px solid #e1e7ed;
+    box-sizing: border-box;
+    border-radius: 3px;
+    outline: none;
+    &:focus {
+      border: 1px solid gray;
+    }
+  }
+
+  &__btn {
+    margin-top: 10px;
+    text-align: center;
+    line-height: 50px;
+    width: 270px;
+    height: 50px;
+    background-color: #fd5c63;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: 0.3s;
+    &:hover {
+      background-color: gray;
+    }
+  }
+
+  &__btn-title {
+    display: block;
+    color: #ffff;
+    text-decoration: none;
+  }
+}

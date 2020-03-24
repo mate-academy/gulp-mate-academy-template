@@ -1,0 +1,20 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  justify-content: center;
+  grid-gap: 200px;
+  box-shadow: 0 -1px 0 #e1e7ed;
+  transform: translateX(-45px);
+  @media screen and (max-width: 1200px) {
+    grid-gap: 20px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #3d4e61;
+    cursor: pointer;
+    &:hover {
+      color: rgba(61, 78, 97, 0.8);
+    }
+  }
+}

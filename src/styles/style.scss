@@ -1,0 +1,31 @@
+@import "header";
+@import "nav";
+@import "main";
+@import "book";
+@import "footer";
+@import "btn";
+@import "apart";
+@import "fonts";
+
+html {
+  font-family: Avenir, sans-serif;
+  font-size: 16px;
+  color: #3d4e61;
+}
+
+body {
+  margin: 0;
+}
+
+.promo {
+  height: 464px;
+  width: 100%;
+  object-fit: cover;
+}
+
+a {
+  outline: none;
+  &:focus {
+    border: 1px solid gray;
+  }
+}
