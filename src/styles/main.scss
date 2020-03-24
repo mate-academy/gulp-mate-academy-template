@@ -1,6 +1,14 @@
 .main {
-  display: grid;
+  padding: 10px 50px;
+}
+
+.container {
+  display: flex;
   justify-content: center;
-  grid-gap: 30px;
-  grid-template-columns: repeat(2, 500px);
+  max-width: 1200px;
+  margin: 0 auto;
+  @media screen and (max-width: 1200px) {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
 }

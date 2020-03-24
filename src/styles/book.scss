@@ -1,12 +1,16 @@
 .book {
   display: grid;
   justify-content: center;
-  margin: 40px auto;
+  margin: 40px;
   padding: 28px;
   box-sizing: border-box;
   width: 330px;
   height: 319px;
   border: 1px solid #e1e7ed;
+
+  @media screen and (max-width: 1200px) {
+    margin: 40px auto;
+  }
   &__price {
     display: inline;
     box-sizing: border-box;
@@ -47,6 +51,5 @@
     display: block;
     color: #ffff;
     text-decoration: none;
-   
   }
 }
