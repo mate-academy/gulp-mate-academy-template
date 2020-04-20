@@ -4,3 +4,18 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "LeoHand";
+  src: url("../fonts/LeoHand.woff") format("woff");
+  src: url("../fonts/LeoHand.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Blitz-Script";
+  src: url("../fonts/Blitz-Script") format("otf");
+  font-weight: 500;
+  font-style: normal;
+}
