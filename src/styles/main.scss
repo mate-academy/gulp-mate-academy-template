@@ -5,3 +5,34 @@
 body {
   background: $c-gray;
 }
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.area {
+  width: 450px;
+  height: 450px;
+  background-color: cornflowerblue;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__cell {
+    width: 150px;
+    height: 150px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+  }
+}
