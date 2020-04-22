@@ -33,57 +33,60 @@ function initGame() {
     child.innerHTML = '';
   });
 
-  feild.addEventListener('click', (e) => {
+  feild.addEventListener('click', setMark);
+
+  function checked(arr) {
+    const isSuccess = goalToWin.findIndex(item =>
+      item.every(el => arr.includes(el)));
+
+    if (isSuccess !== -1) {
+      feild.removeEventListener('click', setMark);
+      crossResult(isSuccess);
+    }
+
+    if ((isSuccess === -1) && (filledEls.length === 9)) {
+      setTimeout(() => showResult(true), 500);
+    }
+  }
+
+  function crossResult(ind) {
+    const hCrossedEls = [0, 6, 7];
+    const vCrossedEls = [1, 3, 4];
+    const indexFirstEl = goalToWin[ind][0] - 1;
+    const hr = document.createElement('hr');
+
+    if (hCrossedEls.includes(ind)) {
+      hr.classList.add('horisontal');
+    }
+
+    if (vCrossedEls.includes(ind)) {
+      hr.classList.add('vertical');
+    }
+
+    if (ind === 2) {
+      hr.classList.add('crossed1_9');
+    }
+
+    if (ind === 5) {
+      hr.classList.add('crossed3_7');
+    }
+
+    const firstElement = [...feild.children][indexFirstEl];
+
+    firstElement.prepend(hr);
+
+    setTimeout(() => showResult(false), 500);
+  }
+
+  function setMark(e) {
     const target = e.target;
 
     if (!target.matches('.cell')) {
       return;
     }
 
-    function checked(arr) {
-      const isSuccess = goalToWin.findIndex(item =>
-        item.every(el => arr.includes(el)));
-
-      if (isSuccess !== -1) {
-        crossResult(isSuccess);
-      }
-
-      if ((isSuccess === -1) && (filledEls.length === 9)) {
-        setTimeout(() => showResult(true), 500);
-      }
-    }
-
-    function crossResult(ind) {
-      const hCrossedEls = [0, 6, 7];
-      const vCrossedEls = [1, 3, 4];
-      const indexFirstEl = goalToWin[ind][0] - 1;
-      const hr = document.createElement('hr');
-
-      if (hCrossedEls.includes(ind)) {
-        hr.classList.add('horisontal');
-      }
-
-      if (vCrossedEls.includes(ind)) {
-        hr.classList.add('vertical');
-      }
-
-      if (ind === 2) {
-        hr.classList.add('crossed1_9');
-      }
-
-      if (ind === 5) {
-        hr.classList.add('crossed3_7');
-      }
-
-      const firstElement = [...feild.children][indexFirstEl];
-
-      firstElement.prepend(hr);
-
-      setTimeout(() => showResult(false), 500);
-    }
-
     for (let i = 0; i < [...feild.children].length; i++) {
-      if (target === [...feild.children][i]) {
+      if ((target === [...feild.children][i]) && (!filledEls.includes(i + 1))) {
         if (isFirstPlayer) {
           if (zeros.includes(i + 1)) {
             return;
@@ -105,20 +108,20 @@ function initGame() {
         isFirstPlayer = !isFirstPlayer;
       }
     }
+  }
 
-    function showResult(arg) {
-      feild.style.visibility = 'hidden';
+  function showResult(arg) {
+    feild.style.visibility = 'hidden';
 
-      if (arg) {
-        message.innerHTML = `Dead heat`;
-      } else {
-        isFirstPlayer
-          ? message.innerHTML = `Second player won`
-          : message.innerHTML = `First player <br/>won`;
-      }
-      isFirstPlayer = true;
+    if (arg) {
+      message.innerHTML = `Dead heat`;
+    } else {
+      isFirstPlayer
+        ? message.innerHTML = `Second player won`
+        : message.innerHTML = `First player <br/>won`;
     }
-  });
+    isFirstPlayer = true;
+  }
 }
 
 button.addEventListener('click', (e) => {
