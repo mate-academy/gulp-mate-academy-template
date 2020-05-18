@@ -7,7 +7,49 @@
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <header class="header">
+      <nav class="nav">
+        <img src="images/header/logo.png" alt="" class="logo">
+        <label class="nav__mobile-wrapper" for="nav__mobile"></label>
+        <input type="checkbox" id="nav__mobile" class="nav__mobile">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Features</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">About us</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Materials</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Message us</a>
+          </li>
+        </ul>
+        <a href="#">
+          <img class="nav__bag"src="images/header/bag.png" alt="">
+        </a>
+      </nav>
+      <div class="header__row">
+        <div class="header__row-left">
+          <a href="" class="header__row-left-link">
+            <img src="images/header/More.png" alt="">
+            <img src="images/header/Arrow.png" alt="">
+          </a>
+        </div>
+        <div class="header__row-center">
+          <img src="images/header/slogan.png" class="header__img" alt="">
+          <p class ="price"><strong>$ 7,5</strong><br>Get the second order <br> in half price</p>
+          <button class='button button__buy'>
+            Buy now&nbsp  &nbsp ——>
+          </button>
+
+        </div>
+        <div class="header__row-right">
+          <img src="images/header/header-img.png" class="header__img" alt="">
+        </div>
+      </div>
+    </header>
+    <script type="text/javascript" src="scripts/nav.js"></script>
   </body>
 </html>

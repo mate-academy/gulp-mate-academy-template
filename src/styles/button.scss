@@ -1,0 +1,28 @@
+@import "utils";
+
+.button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 50px;
+  border: 1px solid hsl(190, 96%, 32%);
+  box-sizing: border-box;
+  margin-right: 80px;
+  font-size: 14px;
+  text-transform: uppercase;
+  background-color: white;
+
+  color: hsl(0, 0%, 7%);
+
+  &__arrow {
+    margin-left: 10px;
+  }
+  transition: transform 0.7s, color 0.7s;
+
+  &:hover {
+    transform: scale(1.05);
+    color: hsl(190, 96%, 32%);
+  }
+}

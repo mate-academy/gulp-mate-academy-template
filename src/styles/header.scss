@@ -1,0 +1,47 @@
+@import "utils";
+
+.header {
+  background: url(../images/header/header-back.png) no-repeat top;
+  background-color: white;
+  background-size: contain;
+  padding: 30px 144px 150px;
+
+  font-size: 16px;
+  line-height: 150%;
+
+  height: 640px;
+  &__img {
+    width: 100%;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+
+    &-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+
+      &-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+
+    &-right {
+      width: 43%;
+    }
+
+    &-center {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      box-sizing: border-box;
+      width: 43%;
+    }
+  }
+}
