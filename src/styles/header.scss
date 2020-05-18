@@ -6,6 +6,8 @@
   background-size: contain;
   padding: 30px 144px 150px;
 
+  overflow: hidden;
+
   font-size: 16px;
   line-height: 150%;
 
@@ -43,5 +45,11 @@
       box-sizing: border-box;
       width: 43%;
     }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .header {
+    padding: 30px 70px;
   }
 }
