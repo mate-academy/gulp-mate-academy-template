@@ -1,100 +1,172 @@
 'use strict';
 
-const gulp = require('gulp');
+const {
+  series,
+  parallel,
+  task,
+  src,
+  watch,
+  dest,
+} = require('gulp');
 const autoprefixer = require('gulp-autoprefixer');
 const clean = require('gulp-clean');
 const browserSync = require('browser-sync');
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
-const colors = require('colors');
 const gulpReplacePath = require('gulp-replace-path');
 
 const gulpStylelint = require('gulp-stylelint');
-const gulpHtmllint = require('gulp-htmllint');
+const gulpLintHTML = require('@linthtml/gulp-linthtml');
 const gulpEslint = require('gulp-eslint');
 
-const distDirectory = 'dist';
+const OPTION_PATTERN = /^\-{1,2}/;
+
+const isOptionName = (argument) => OPTION_PATTERN.test(argument);
+const getOptionName = (argument) => argument.replace(OPTION_PATTERN, '');
+
+const parseCommandLineOptions = (argList) => {
+  const options = {};
+
+  let currentOptionName = null;
+
+  const processOptionName = (argument) => {
+    currentOptionName = getOptionName(argument);
+    options[currentOptionName] = true;
+  };
+
+  const processOptionValue = (argument) => {
+    if (currentOptionName) {
+      options[currentOptionName] = argument;
+    }
+
+    currentOptionName = null;
+  };
+
+  const processArgument = (argument) => {
+    const trimmedArgument = argument.trim();
+
+    if (isOptionName(trimmedArgument)) {
+      processOptionName(trimmedArgument);
+    } else {
+      processOptionValue(trimmedArgument);
+    }
+  };
+
+  argList.forEach(processArgument);
+
+  return options;
+};
+
+const args = parseCommandLineOptions(process.argv);
+
+const distDirectory = args.destination || args.d || 'dist';
 const htmlBlob = 'src/*.html';
 const imagesBlob = 'src/images/**';
 const fontsBlob = 'src/fonts/**';
 const stylesBlob = 'src/styles/**';
 const jsBlob = 'src/scripts/**';
 
-const { series, parallel } = gulp;
+gulpLintHTML.description = "Analyse all HTML files using linthtml";
 
-gulp.task('cleanDist', function() {
-  return gulp.src(distDirectory, { read: false, allowEmpty: true })
-    .pipe(clean());
-});
+/**
+ * Clean
+ */
+task('cleanDist', () => (
+  src(distDirectory, { read: false, allowEmpty: true })
+    .pipe(clean())
+));
 
-gulp.task('processHtml', function() {
-  return gulp.src(htmlBlob)
-    .pipe(gulpHtmllint({
-      config: './node_modules/@mate-academy/htmllint-config/.htmllintrc',
-    }, function(filepath, issues) {
-      issues.forEach(function(issue) {
-        const { line, column, code, msg } = issue;
-        console.log(
-          ` ❌   ${colors.red('htmllint error')}
-          📁  file: ${filepath}
-          🖊️ [line: ${line}, column: ${column}]: (${code}) - ${msg}`);
-      });
-    }))
-    .pipe(gulp.dest(distDirectory));
-});
+/**
+ * HTML
+ */
+task('lintHtml', () => (
+  src(htmlBlob)
+    .pipe(gulpLintHTML())
+    .pipe(gulpLintHTML.format())
+));
 
-gulp.task('processImages', function() {
-  return gulp.src(imagesBlob)
-    .pipe(gulp.dest(`${distDirectory}/images/`));
-});
+task('buildHtml', () => (
+  src(htmlBlob)
+    .pipe(dest(distDirectory))
+));
 
-gulp.task('processFonts', function() {
-  return gulp.src(fontsBlob)
-    .pipe(gulp.dest(`${distDirectory}/fonts/`));
-});
+task('processHtml', series('lintHtml', 'buildHtml'));
 
-gulp.task('lintCss', function() {
-  return gulp
-    .src(stylesBlob)
+/**
+ * Styles
+ */
+task('lintStyles', () => (
+  src(stylesBlob)
     .pipe(gulpStylelint({
       failAfterError: false,
       reporters: [
         { formatter: 'string', console: true },
       ],
       debug: true,
-    }));
-});
+    }))
+));
 
-gulp.task('processStyles', series('lintCss', function() {
-  return gulp.src(stylesBlob)
+task('buildStyles', () => (
+  src(stylesBlob)
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(gulpReplacePath(/(?:\.\.\/){2,}images/g, '../images'))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(`${distDirectory}/styles`))
-    .pipe(browserSync.reload({ stream: true }));
-}));
-
-gulp.task('processJs', function() {
-  return gulp.src(jsBlob)
-    .pipe(gulpEslint())
-    .pipe(gulpEslint.format())
-    .pipe(gulp.dest(`${distDirectory}/scripts/`));
-});
-
-gulp.task('build', series(
-  'cleanDist',
-  parallel(
-    'processStyles',
-    'processHtml',
-    'processImages',
-    'processFonts',
-    'processJs',
-  )
+    .pipe(dest(`${distDirectory}/styles`))
+    // NOTE: need to leave here to pass changed styles to the BrowserSync
+    .pipe(browserSync.reload({ stream: true }))
 ));
 
-gulp.task('serve', function() {
+task('processStyles', series('lintStyles', 'buildStyles'));
+
+/**
+ * Javascript
+ */
+task('lintJavascript', () => (
+  src(jsBlob)
+    .pipe(gulpEslint())
+    .pipe(gulpEslint.format())
+));
+
+task('buildJavascript', () => (
+  src(jsBlob)
+    .pipe(dest(`${distDirectory}/scripts/`))
+));
+
+task('processJavascript', series('lintJavascript', 'buildJavascript'));
+
+/**
+ * Static
+ */
+task('processImages', () => (
+  src(imagesBlob)
+    .pipe(dest(`${distDirectory}/images/`))
+));
+
+task('processFonts', () => (
+  src(fontsBlob)
+    .pipe(dest(`${distDirectory}/fonts/`))
+));
+
+/**
+ * Build
+ */
+task('build', series(
+  'cleanDist',
+  parallel(
+    'processHtml',
+    'processStyles',
+    'processJavascript',
+    'processImages',
+    'processFonts',
+  ),
+));
+
+/**
+ * Serve
+ */
+task('serve', () => {
   browserSync.init({
     notify: false,
     server: {
@@ -103,19 +175,22 @@ gulp.task('serve', function() {
     port: 8080,
   });
 
-  gulp.watch(htmlBlob, series('processHtml'))
+  watch(htmlBlob, series('processHtml'))
     .on('change', browserSync.reload);
 
-  gulp.watch(imagesBlob, series('processImages'))
+  watch(imagesBlob, series('processImages'))
     .on('change', browserSync.reload);
 
-  gulp.watch(fontsBlob, series('processFonts'))
+  watch(fontsBlob, series('processFonts'))
     .on('change', browserSync.reload);
 
-  gulp.watch(stylesBlob, series('processStyles'));
+  watch(stylesBlob, series('processStyles'));
 
-  gulp.watch(jsBlob, series('processJs'))
+  watch(jsBlob, series('processJavascript'))
     .on('change', browserSync.reload);
 });
 
-gulp.task('default', series('build', 'serve'));
+/**
+ * Default
+ */
+task('default', series('build', 'serve'));
