@@ -4,3 +4,18 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: "Bebas Neue", cursive;
+  src: url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+}
+
+@font-face {
+  font-family: "Proxima Nova";
+  src: local("Proxima Nova Thin")  local("Proxima-Nova-Thin"),
+    url("ProximaNovaT-Thin.woff2") format("woff2"),
+    url("ProximaNovaT-Thin.woff") format("woff"),
+    url("ProximaNovaT-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}

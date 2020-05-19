@@ -1,6 +1,7 @@
 @import "utils";
 
 .nav {
+  overflow-x: hidden;
   display: flex;
   justify-content: space-between;
   margin-bottom: 90px;
@@ -43,12 +44,13 @@
   .nav {
     align-items: flex-start;
     justify-content: space-between;
+    overflow: hidden;
 
     &__mobile-button {
       display: block;
       position: absolute;
       top: 30px;
-      right: 70px;
+      right: 5%;
     }
 
     &__bag {
@@ -56,9 +58,10 @@
     }
 
     &__list {
+      width: 1px;
       position: absolute;
       top: -20px;
-      right: 0;
+      right: 100%;
 
       display: flex;
       flex-direction: column;
@@ -66,12 +69,16 @@
 
       background: hsl(190, 96%, 32%);
       height: 450px;
-      width: 230px;
+
       min-width: 230px;
 
       padding-top: 70px;
-      transform: translateX(100%);
-      transition: transform 1s;
+
+      transition: right 1s;
+    }
+
+    &__link {
+      color: white;
     }
   }
 
@@ -81,8 +88,8 @@
       justify-content: flex-start;
       position: relative;
       &__list {
-        transition: transform 1s;
-        transform: translateX(0);
+        transition: right 1s;
+        right: 0;
       }
 
       &__item {
@@ -91,10 +98,6 @@
         &:first-child {
           display: block;
         }
-      }
-
-      &__link {
-        color: white;
       }
 
       &__mobile-button {

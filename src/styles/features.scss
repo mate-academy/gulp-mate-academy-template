@@ -1,0 +1,32 @@
+@import "utils";
+
+.features {
+  padding: 0 135px 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+
+  &__main-title {
+    margin-bottom: 80px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 30%;
+    min-width: 160px;
+    text-align: center;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+
+  &__title {
+    text-align: center;
+  }
+}

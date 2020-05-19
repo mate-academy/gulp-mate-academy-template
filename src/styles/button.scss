@@ -19,10 +19,24 @@
   &__arrow {
     margin-left: 10px;
   }
-  transition: transform 0.7s, color 0.7s;
+  transition: transform 0.5s, color 0.5s;
 
   &:hover {
-    transform: scale(1.05);
+    box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5);
     color: hsl(190, 96%, 32%);
+  }
+}
+
+@media screen and (max-width:850px) {
+  .button {
+    width: 90%;
+    margin-right: 0;
+    background-color: hsl(52, 100%, 61%);
+  }
+}
+
+@media screen and (max-width:550px) {
+  .button {
+    margin: 20px 0;
   }
 }

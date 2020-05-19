@@ -4,6 +4,11 @@
 @import "header.scss";
 @import "navigation.scss";
 @import "button.scss";
+@import "description.scss";
+@import "descr-down.scss";
+@import "features.scss";
+@import "team.scss";
+@import "materials.scss";
 
 body {
   background: $c-gray;
@@ -11,6 +16,39 @@ body {
   padding: 0;
   scroll-behavior: smooth;
   overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 58px;
+  line-height: 58px;
+  letter-spacing: 0.15em;
+  color: hsl(0, 0%, 20%);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 0%);
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 20%);
 }
 
 a {
@@ -22,16 +60,19 @@ a {
   }
 }
 
-strong {
-  font-size: 26px;
-  line-height: 32px;
-  color: hsl(0, 0%, 20%);
+p {
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 .price {
+  font-family: "Proxima Nova", sans-serif;
   font-size: 14px;
-  line-height: 150%;
-  color: hsl(0, 0%, 31%);
-  margin-bottom: 50px;
-  margin-top: 0;
+  line-height: 21px;
+  color: hsl(0, 0%, 20%);
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
 }
