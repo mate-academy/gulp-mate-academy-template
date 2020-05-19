@@ -1,0 +1,24 @@
+@import "utils";
+
+.extra {
+  padding-right: 105px;
+  display: flex;
+  justify-content: space-between;
+
+  &__container {
+    width: 50%;
+  }
+
+  &__photos {
+    width: 50%;
+  }
+
+  &__item-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 49%;
+  }
+}

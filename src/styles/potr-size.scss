@@ -1,0 +1,39 @@
+@import "utils";
+
+.pots-size {
+  padding: 120px 135px;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__fragment {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 48%;
+  }
+}
+
+.fragment {
+  &__column {
+    display: flex;
+  }
+
+  &__text {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-left: 15px;
+    }
+  }
+
+  &__line {
+    width: 2px;
+    background-color: hsl(0, 0%, 85%);
+  }
+}
