@@ -19,16 +19,16 @@
             <a class="nav__link" href="#">Basket</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Features</a>
+            <a class="nav__link" href="#about">About us</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">About us</a>
+            <a class="nav__link" href="#features">Features</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Materials</a>
+            <a class="nav__link" href="#materials">Materials</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">Message us</a>
+            <a class="nav__link" href="#contact">Message us</a>
           </li>
           <li class="nav__mobile-close nav__item">
              X  —————— CLOSE
@@ -49,7 +49,7 @@
       </nav>
       <div class="header__row header-content">
         <div class="header-content__left">
-          <a href="#" class="header__row-left-link  header-content__left-link">
+          <a href="#" class="header-content__link">
             <img
               src="images/header/More.png"
               alt="More about potr pots"
@@ -78,46 +78,52 @@
         </div>
       </div>
     </header>
-    <section class="description">
+    <section class="description" id="about">
       <h2>For whom?</h2>
-      <div class="description__row-top">
-        <img
-          class = "description__main-img"
-          src="images/descr/Rectangle 3.png"
-          alt="pot image"
-        >
-        <div>
-          <h3>/For those who <br>value durable things</h3>
-          <p>
-            Don’t worry if you happen to knock your POTR on the floor, unlike a
-            traditional ceramic pot it will take the fall in its stride.
-          </p>
-        </div>
-      </div>
-      <div class="description__row-down descr-down">
-        <div class="descr-down__left">
+      <div class="description__container">
+        <div class="description__item">
           <img
-            class = "descr-down__img descr-down__img--small"
-            src="images/descr/Rectangle 3.2.png"
+            class = "description__img description__img--medium"
+            src="images/descr/Rectangle 3.png"
+            alt="pot image"
+          >
+          <div class="description__text">
+            <h3 class="description__title">/1 For those who value durable things</h3>
+            <p class="description__notes">
+              Don’t worry if you happen to knock your POTR on the floor, unlike a
+              traditional ceramic pot it will take the fall in its stride.
+            </p>
+          </div>
+        </div>
+
+        <div class="description__item">
+          <img
+            class = "description__img description__img--small"
+            src="images/descr/Rectangle 3.1.png"
             alt="art image"
           >
-          <h3>/For those who <br>value durable things</h3>
-          <p> Don’t worry if you happen to knock your POTR on <br>the floor, unlike a
-            traditional ceramic pot it will take <br>the fall in its stride.</p>
+          <div class="description__text">
+            <h3 class="description__title">/2 For those who <br>value durable things</h3>
+            <p class="description__notes"> Don’t worry if you happen to knock your POTR on the floor, unlike a
+              traditional ceramic pot it will take the fall in its stride.</p>
+          </div>
         </div>
-        <div class="descr-down__right">
+        <div class="description__item">
           <img
-            class = "descr-down__img descr-down__img--big"
-            src="images/descr/Rectangle 3.1.png"
+            class = "description__img description__img--big"
+            src="images/descr/Rectangle 3.2.png"
             alt="cactus in the spot"
           >
-          <h3>/For those who <br>value durable things</h3>
-          <p> Don’t worry if you happen to knock your POTR on <br>the floor, unlike a
-            traditional ceramic pot it will take <br>the fall in its stride.</p>
+          <div class="description__text">
+            <h3 class="description__title">/3 For those who value durable things</h3>
+            <p class="description__notes"> Don’t worry if you happen to knock your POTR on the floor, unlike a
+            traditional ceramic pot it will take the fall in its stride.</p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="features">
+
+    <section class="features" id="features">
       <img
         src="images/features/POTR Pots Features.png"
         class ="features__main-title"
@@ -192,7 +198,7 @@
         class="team__big-word--2"
       >
     </section>
-    <section class="materials">
+    <section class="materials" id="materials">
       <img
         src="images/materials/Materials and Features.png"
         class="materials__title"
@@ -212,6 +218,18 @@
           and wicking cord. Not only is it 100% recycled, it looks great and works
           really well at wicking water.
         </p>
+      </div>
+    </section>
+
+    <section class="pots-size">
+      <h2 class="pots-size__title">Which size POTR for my house plant ? </h2>
+      <div class="pots-size__container">
+        <div class="pots-size__text"></div>
+        <img
+          src="images/size/size.png"
+          alt="image with size"
+          class="pots-size__img"
+        >
       </div>
     </section>
     <script type="text/javascript" src="scripts/nav.js"></script>

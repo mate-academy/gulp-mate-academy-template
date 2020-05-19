@@ -9,6 +9,7 @@
 
   &__main-title {
     margin-bottom: 80px;
+    width: 60%;
   }
   &__container {
     display: flex;
@@ -18,8 +19,9 @@
 
   &__item {
     width: 30%;
-    min-width: 160px;
+    min-width: 220px;
     text-align: center;
+    padding: 15px;
   }
 
   &__img {
@@ -28,5 +30,14 @@
 
   &__title {
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .features {
+    padding: 0 50px 35px;
+    &__container {
+      justify-content: space-evenly;
+    }
   }
 }

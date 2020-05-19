@@ -2,10 +2,10 @@
 @import "fonts";
 @import "typography";
 @import "header.scss";
+@import "header-content.scss";
 @import "navigation.scss";
 @import "button.scss";
 @import "description.scss";
-@import "descr-down.scss";
 @import "features.scss";
 @import "team.scss";
 @import "materials.scss";
@@ -14,11 +14,11 @@ body {
   background: $c-gray;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 html {
+  scroll-behavior: smooth;
   overflow-x: hidden;
   font-family: "Proxima Nova", sans-serif;
   font-size: 16px;
