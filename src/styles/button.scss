@@ -9,6 +9,15 @@
 
   color: $h-color;
   background-color: $header-bg-color;
+  transition: color 1s;
+
+  &:hover {
+    color: $logo-sec-color;
+  }
+
+  &:active {
+    color: $logo-sec-color;
+  }
 }
 
 .button {

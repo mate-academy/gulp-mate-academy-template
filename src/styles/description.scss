@@ -35,6 +35,12 @@
   &__img {
     max-width: 500px;
     height: auto;
+    transition: transform 0.5s;
+
+    &:hover {
+      box-shadow: 0 6px 23px $but-shadow;
+      transform: scale(1.05);
+    }
 
     &--small {
       width: 100%;
@@ -69,7 +75,7 @@
 
     &__item {
       justify-content: space-between;
-      
+
       &:nth-child(2) {
         width: 100%;
         flex-direction: row-reverse;

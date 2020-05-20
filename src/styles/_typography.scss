@@ -93,6 +93,14 @@ a {
   color: $h-color;
 }
 
+.materials {
+  &__text {
+    &:last-child {
+      color: $bg-color;
+    }
+  }
+}
+
 .footer {
   &__text {
     margin-bottom: 20px;
