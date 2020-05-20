@@ -16,6 +16,11 @@
 
   &__img {
     max-width: 280px;
+    transition: transform 2s;
+
+    &:hover {
+      transform: rotate(360deg) scale(1.1);
+    }
   }
 
   &__item-container {

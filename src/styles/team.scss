@@ -15,14 +15,14 @@
     max-width: 700px;
 
     &--1 {
+      transform: translateX(10%);
       width: 70%;
-      left: 100px;
       top: 200px;
     }
 
     &--2 {
+      transform: translateX(60%);
       width: 50%;
-      right: 100px;
       bottom: 130px;
     }
   }
@@ -32,6 +32,13 @@
     max-width: 650px;
     width: 55%;
     margin-left: 60px;
+    transition: transform 1s, border-radius 1s;
+
+    &:hover {
+      box-shadow: 0 6px 23px $but-shadow;
+      transform: scale(1.05);
+      border-radius: 15px;
+    }
   }
 
   &__container {
