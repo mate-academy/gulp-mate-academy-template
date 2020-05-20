@@ -1,10 +1,11 @@
 @import "utils";
 
 .features {
-  padding: 0 135px 150px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  padding: 0 135px 150px;
   box-sizing: border-box;
 
   &__main-title {
@@ -20,12 +21,19 @@
   &__item {
     width: 30%;
     min-width: 220px;
+
     text-align: center;
     padding: 15px;
   }
 
   &__img {
     max-width: 100%;
+    transition: transform 1s;
+
+    &:hover {
+      box-shadow: 0 6px 23px $but-shadow;
+      transform: scale(1.05);
+    }
   }
 
   &__title {
@@ -36,8 +44,16 @@
 @media screen and (max-width: 1200px) {
   .features {
     padding: 0 50px 35px;
+
     &__container {
       justify-content: space-evenly;
     }
+  }
+}
+
+@media screen and (min-width:1600px) {
+  .features {
+    padding-left: calc(50% - 575px);
+    padding-right: calc(50% - 575px);
   }
 }

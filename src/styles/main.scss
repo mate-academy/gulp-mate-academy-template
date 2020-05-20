@@ -1,6 +1,8 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "reset.scss";
+@import "logo.scss";
 @import "header.scss";
 @import "header-content.scss";
 @import "navigation.scss";
@@ -15,88 +17,11 @@
 @import "footer.scss";
 
 body {
-  background: $c-gray;
-  margin: 0;
-  padding: 0;
+  background: $bg-color;
   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 16px;
-  line-height: 150%;
-}
-
-h2 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 58px;
-  line-height: 58px;
-  letter-spacing: 0.15em;
-  color: hsl(0, 0%, 20%);
-  text-transform: uppercase;
-}
-
-h3 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 36px;
-  line-height: 150%;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: hsl(0, 0%, 0%);
-}
-
-h4 {
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: hsl(0, 0%, 20%);
-}
-
-h5 {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 18px;
-  line-height: 18px;
-  display: flex;
-  align-items: flex-end;
-  letter-spacing: 0.15em;
-  color: rgb(0, 0, 0);
-  margin-top: 20px;
-}
-
-h6 {
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 30px;
-  line-height: 150%;
-  display: flex;
-  align-items: flex-end;
-  color: hsl(0, 0%, 20%);
-}
-
-a {
-  text-decoration: none;
-  transition: transform 0.5s;
-
-  &:hover {
-    transform: scale(1.05);
-  }
-}
-
-p {
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.price {
-  font-family: "Proxima Nova", sans-serif;
-  font-size: 14px;
-  line-height: 21px;
-  color: hsl(0, 0%, 20%);
-}
-
-.container-center {
-  display: flex;
-  justify-content: center;
 }

@@ -3,6 +3,11 @@
 .form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+
+  &__label {
+    width: 100%;
+  }
 
   &__input,
   &__textarea {
@@ -11,33 +16,19 @@
     padding-top: 16px;
     width: 100%;
 
-    font-family: "Proxima Nova", sans-serif;
-    font-size: 16px;
-    line-height: 150%;
-    display: flex;
-    align-items: flex-end;
-    color: hsl(0, 0%, 31%);
-
     outline: none;
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid $form-border;
+    background-color: $header-bg-color;
 
-    background-color: #ffec7a;
     transition: border-color 1s;
 
     &::placeholder {
-      font-family: "Proxima Nova", sans-serif;
-      font-size: 16px;
-      line-height: 150%;
-      display: flex;
-      align-items: flex-end;
-      color: hsl(0, 0%, 31%);
-
       opacity: 0.7;
     }
 
     &:focus {
-      border-color: red;
+      border-color: $button-text-color;
     }
   }
 }

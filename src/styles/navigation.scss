@@ -4,8 +4,9 @@
   overflow-x: hidden;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 90px;
   align-items: center;
+
+  margin-bottom: 90px;
   overflow: hidden;
 
   &__mobile {
@@ -21,7 +22,6 @@
 
   &__item {
     display: inline-block;
-    color: #4f4f4f;
   }
 
   &__link {
@@ -58,28 +58,31 @@
     }
 
     &__list {
-      width: 1px;
+
       position: absolute;
-      top: -20px;
-      right: 100%;
+      top: -130%;
+      right: 0;
       z-index: 2;
 
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
 
-      background: hsl(190, 96%, 32%);
+      background: $logo-sec-color;
+
       height: 450px;
-
       min-width: 230px;
-
       padding-top: 70px;
 
-      transition: right 1s;
+      transition: top 1s;
     }
 
     &__link {
       color: white;
+    }
+
+    &__item {
+      margin-top: 30px;
     }
   }
 
@@ -87,15 +90,14 @@
     .nav {
       align-items: space-between;
       justify-content: flex-start;
-      position: relative;
+
       &__list {
-        transition: right 1s;
+        transition: top 1s;
+        top: -20px;
         right: 0;
       }
 
       &__item {
-        margin-top: 30px;
-
         &:first-child {
           display: block;
         }
@@ -114,7 +116,7 @@
         bottom: 110px;
         right: -50px;
 
-        color: white;
+        color: $bg-color;
 
       }
     }

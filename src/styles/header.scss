@@ -7,9 +7,6 @@
 
   overflow: hidden;
 
-  font-size: 16px;
-  line-height: 150%;
-
   height: 640px;
 
   &__row {
@@ -23,5 +20,12 @@
   .header {
     height: auto;
     padding: 30px 5%;
+  }
+}
+
+@media screen and (min-width:1600px) {
+  .header {
+    padding-left: calc(50% - 575px);
+    padding-right: calc(50% - 575px);
   }
 }

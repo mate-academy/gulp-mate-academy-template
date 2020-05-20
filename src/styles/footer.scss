@@ -1,16 +1,22 @@
 @import "utils";
 
 .footer {
+  display: flex;
   flex-wrap: wrap;
-  box-sizing: border-box;
-  position: relative;
-  top: -25px;
-  background: url(../images/header/header-back.png) no-repeat left top;
-  background-size: 100% 100%;
-  background-color: $c-gray;
   flex-direction: column;
-  padding: 180px 0 84px 14.2%;
-  color: #fff;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+  padding: 40px 135px;
+
+  position: relative;
+  top: -50px;
+
+  background: url(../images/header/header-back.png) no-repeat left top;
+  background-size: cover;
+
+  width: 100%;
 
   &__part {
     display: flex;
@@ -18,25 +24,16 @@
   }
 
   &__title {
-    margin-bottom: 26px;
-    color: #fff;
 
-  }
-
-  &__text {
-    margin-bottom: 8px;
-  }
-
-  &__link {
-    margin-bottom: 48px;
+    margin-bottom: 20px;
   }
 
   &__container {
     display: flex;
     justify-content: space-between;
-    width: 76.3%;
+
+    width: 100%;
     margin-bottom: 121px;
-    max-width: 1145px;
   }
 
   &__left {
@@ -49,41 +46,82 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 35%;
+
+    margin-top: 150px;
+    width: 34%;
+  }
+
+  &__row {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+
+  &__icon-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 @media screen and (min-width:1600px) {
   .footer {
-    padding-left: calc(100% / 2 - 1145px / 2);
+    padding-left: calc(50% - 575px);
+    padding-right: calc(50% - 575px);
   }
 }
 
 @media screen and (max-width: 1000px) {
   .footer {
-    padding-top: 20px;
-    &__wrap {
+    padding: 20px 50px;
+
+    &__part {
       width: 100%;
       display: grid;
       grid-template-columns: repeat(2,1fr);
       justify-content: left;
     }
 
-    &__nav {
-      display: none;
-    }
     &__container {
       padding-top: 20px;
       flex-direction: column;
     }
+
     &__left {
       width: 100%;
       margin-bottom: 35px;
+      margin-top: 20px;
     }
 
     &__right {
       width: 100%;
+      margin-top: 20px;
     }
 
+  }
+}
+
+@media screen and (max-width:650px) {
+  .footer {
+    align-items: center;
+
+    &__row {
+      width: 50%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__wrap {
+      margin-bottom: 30px;
+      width: 100%;
+    }
   }
 }

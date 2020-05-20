@@ -52,6 +52,13 @@
   }
 }
 
+@media screen and (min-width:1600px) {
+  .description {
+    padding-left: calc(50% - 575px);
+    padding-right: calc(50% - 575px);
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .description {
     padding: 50px 35px;
@@ -62,6 +69,7 @@
 
     &__item {
       justify-content: space-between;
+      
       &:nth-child(2) {
         width: 100%;
         flex-direction: row-reverse;

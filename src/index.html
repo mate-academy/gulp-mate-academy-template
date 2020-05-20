@@ -49,7 +49,7 @@
       </nav>
       <div class="header__row header-content">
         <div class="header-content__left">
-          <a href="#" class="header-content__link">
+          <a href="#extra" class="header-content__link">
             <img
               src="images/header/More.png"
               alt="More about potr pots"
@@ -173,7 +173,7 @@
       <img
         src="images/team/Martin.png"
         alt="Martin"
-        class="team__big-word--1"
+        class="team__big-word team__big-word--1"
       >
       <div class="team__container">
         <p class="team__text">
@@ -195,7 +195,7 @@
       <img
         src="images/team/Andy.png"
         alt="Andy"
-        class="team__big-word--2"
+        class="team__big-word team__big-word--2"
       >
     </section>
     <section class="materials" id="materials">
@@ -253,7 +253,7 @@
           class="pots-size__img">
       </div>
     </section>
-    <section class="extra">
+    <section class="extra" id="extra">
       <div class="extra__photos">
         <img
           src="images/extra/Rectangle 5-6.png"
@@ -290,26 +290,28 @@
       <div class="extra__container">
         <div class="extra__item-container">
           <div class="extra__item">
-            <h6>• Easy assembly</h6>
+            <h6 class="extra__title">• Easy assembly</h6>
             <p>Pull the draw string to assemble!</p>
           </div>
           <div class="extra__item">
-            <h6>• Flat pack postage </h6>
+            <h6 class="extra__title">• Flat pack postage </h6>
             <p>POTR pots arrive flat packed in an envelope!</p>
           </div>
           <div class="extra__item">
-            <h6>• Self-watering</h6>
+            <h6 class="extra__title">• Self-watering</h6>
             <p>Add water to POTR and watch your plant drink!</p>
           </div>
         </div>
-        <button class="button extra__button">Buy now ---- </button>
-        <div class="extra__sale">
-          <h3 class="extra__percent">50% off</h3>
-          <h5 class="extra__text">Get the second order in half price</h5>
+        <div class="extra__wrap">
+          <button class="button extra__button">Buy now ---- </button>
+          <div class="extra__sale">
+            <h3 class="extra__percent">50% off</h3>
+            <h5 class="extra__text">Get the second order in half price</h5>
+          </div>
         </div>
       </div>
     </section>
-    <footer class="footer container" id="contact">
+    <footer class="footer" id="contact">
       <div class="footer__container">
         <div class="footer__left">
           <h3 class="footer__title">have any questions?</h3>
@@ -320,7 +322,7 @@
             method="GET"
             autocomplete="off"
           >
-            <label>
+            <label class="form__label">
               <input
                 class="form__input"
                 type="text"
@@ -328,7 +330,7 @@
                 name="name"
               >
             </label>
-            <label>
+            <label class="form__label">
               <input
                 class="form__input"
                 type="email"
@@ -337,7 +339,7 @@
               >
             </label>
 
-            <label>
+            <label class="form__label">
               <input
                 class="form__input"
                 type="email"
@@ -345,25 +347,26 @@
                 name="message"
               >
             </label>
+            <button class="submit-button"><strong>Submit</strong></button>
           </form>
-          <button class="submit-button"><strong>submit</strong></button>
+
         </div>
         <div class="footer__right">
           <div class="footer__part ">
-            <h5 class="footert__text">Our phone</h5>
-            <a class= "footer__link" href="tel:+7 098 454 56 34">+7 098 454 56 34</a>
+            <h5 class="footer__text">Our phone</h5>
+            <a class= "footer__link" href="tel:+ 7 098 454 56 34">+7 098 454 56 34</a>
           </div>
           <div class="footer__part ">
             <h5 class="footer__text">our email</h5>
             <a
               class= "footer__link"
-              href="https://www.google.com/maps/place/%D0%A4%D0%BB%D0%BE%D1%80%D0%B8%D0%B4%D0%B0,+%D0%A1%D0%A8%D0%90/@27.5946799,-83.804601,6z/data=!4m2!3m1!1s0x88c1766591562abf:0xf72e13d35bc74ed0"
+              href="mailto:hello@miami.com"
               target="blank"
             >
               potrpots@gmail.com
             </a>
           </div>
-          <div class="footer__wrap">
+          <div class="footer__part">
             <h5 class="footer__text">Our office</h5>
             <a
               class= "footer__link"
@@ -373,6 +376,43 @@
               United Kingdom  99 Staple Hill Road, Bristol, BS16 5AD
             </a>
           </div>
+        </div>
+      </div>
+      <div class="footer__row">
+        <div class="footer__wrap">
+          <a href="#"  class= "footer__link" ><strong>Adress</strong></p>
+          <a
+            class= "footer__link"
+            href="https://www.google.com/maps/place/%D0%A4%D0%BB%D0%BE%D1%80%D0%B8%D0%B4%D0%B0,+%D0%A1%D0%A8%D0%90/@27.5946799,-83.804601,6z/data=!4m2!3m1!1s0x88c1766591562abf:0xf72e13d35bc74ed0"
+            target="blank"
+          >
+            United Kingdom <br>
+            99 Staple Hill Road, <br>
+            Bristol, BS16 5AD
+          </a>
+        </div>
+        <div class="footer__wrap">
+          <div class="footer__icon-cont">
+            <a href="" class="footer__icon">
+              <img src="../images/footer/icons8-instagram-50.png" alt="">
+            </a>
+            <a href="" class="footer__icon">
+              <img src="../images/footer/Vector-8.png" alt="">
+            </a>
+            <a href="" class="footer__icon">
+              <img src="../images/footer/Vector-7.png" alt="">
+            </a>
+          </div>
+          <img src="../images/header/logo.png" alt="Potr pots logo" class="logo">
+        </div>
+        <div class="footer__wrap">
+          <a
+            class= "footer__link"
+            href="#about"
+          >
+          <strong>About us</strong>
+          </a>
+          <p>Copyright © 2019</p>
         </div>
       </div>
     </footer>

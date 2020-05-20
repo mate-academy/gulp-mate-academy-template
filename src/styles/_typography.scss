@@ -1,3 +1,105 @@
-h1 {
-  @extend %h1;
+@import "utils";
+
+html {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  color: $text-color;
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 58px;
+  line-height: 58px;
+  letter-spacing: 0.15em;
+  color: $h-color;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 36px;
+  line-height: 150%;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $button-text-color;
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: $h-color;
+}
+
+h5 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0.15em;
+  color: $button-text-color;
+  margin-top: 20px;
+}
+
+h6 {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 30px;
+  line-height: 150%;
+  color: $h-color;
+}
+
+a {
+  text-decoration: none;
+  transition: opacity 0.5s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+::placeholder {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  line-height: 150%;
+  color: $placeholder-col;
+}
+
+.price {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  color: $h-color;
+}
+
+.nav {
+  &__link {
+    color: $placeholder-col;
+  }
+}
+
+.button {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
+  color: $button-text-color;
+}
+
+.submit-button {
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  color: $h-color;
+}
+
+.footer {
+  &__text {
+    margin-bottom: 20px;
+    color: $h-color;
+  }
+
+  &__link {
+    color: $h2-color;
+  }
 }

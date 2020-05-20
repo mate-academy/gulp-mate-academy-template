@@ -1,29 +1,46 @@
 @import "utils";
 
+.submit-button {
+  cursor: pointer;
+
+  width: 20%;
+  border: none;
+  border-bottom: 1px dotted $h-color;
+
+  color: $h-color;
+  background-color: $header-bg-color;
+}
+
 .button {
   cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   width: 240px;
   height: 50px;
-  border: 1px solid hsl(190, 96%, 32%);
   box-sizing: border-box;
   margin-right: 80px;
-  font-size: 14px;
-  text-transform: uppercase;
-  background-color: white;
 
-  color: hsl(0, 0%, 7%);
+  border: 1px solid $logo-sec-color;
+  outline: none;
+  background-color: $bg-color;
+
+  transition: transform 0.5s, color 0.5s, background-color 1s;
 
   &__arrow {
     margin-left: 10px;
   }
-  transition: transform 0.5s, color 0.5s;
 
   &:hover {
-    box-shadow: 2px 2px 5px rgba(154, 147, 140, 0.5);
-    color: hsl(190, 96%, 32%);
+    box-shadow: 2px 2px 5px $but-shadow;
+    color: $logo-sec-color;
+  }
+
+  &:active {
+    box-shadow: 2px 2px 5px $but-shadow;
+    background-color: $button-ativ-col;
   }
 }
 
@@ -31,7 +48,7 @@
   .button {
     width: 90%;
     margin-right: 0;
-    background-color: hsl(52, 100%, 61%);
+    background-color: $header-bg-color;
   }
 }
 
