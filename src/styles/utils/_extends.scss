@@ -2,3 +2,35 @@
   font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
+
+%list_link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Balsamiq Sans", sans-serif;
+}
+
+%list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+%title {
+  font-size: 36px;
+  line-height: 46px;
+  color: #fff;
+  font-family: Roboto, sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+%title-accent {
+  font-family: "Quantum", sans-serif;
+  color: #05c2df;
+  font-size: 36px;
+  line-height: 46px;
+  text-transform: uppercase;
+}

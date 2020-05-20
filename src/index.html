@@ -1,13 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.css">
-  </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="nav">
+      <ul class="nav__list container">
+        <li class="nav__item">
+          <img
+            src="images/logo.png"
+            alt="logo KatVR"
+            class="nav__logo"
+          >
+        </li>
+        <li class="nav__item">
+          <select class="nav__select">
+            <option> En </option>
+            <option> Ru </option>
+          </select>
+        </li>
+        <li class="nav__item"><a href="" class="nav__link">About</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Tech</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Benefits</a></li>
+        <li class="nav__item"><a href="" class="nav__link">Contact</a></li>
+        <li class="nav__item"><button class="nav__button">Buy Now</button></li>
+      </ul>
+    </nav>
+    <div class="header__main container">
+      <div class="header__content">
+        <p class="header__title">THE NEW START OF</p>
+        <p class="header__title--accent">VR LOCOMOTION</p>
+        <p class="header__text">Discover the most comprehensive VR<br>
+          Locomotion system, and unlock infinite<br>
+          motion in any games on any platforms!</p>
+        <p class="header__price">1200$</p>
+        <button class="button__play">Play Video</button>
+      </div>
+      <img
+        src="images/main.png"
+        alt=""
+        class="header__img"
+      >
+    </div>
+    <ul class="foot__list">
+      <li class="foot__item"><a href="" class="foot__link">FAQ</a></li>
+      <li class="foot__item"><a href="" class="foot__link">Help</a></li>
+      <li class="foot__item"><a href="" class="foot__link is-active">More</a></li>
+      <li class="foot__item"><a href="" class="foot__link">Previous</a></li>
+      <li class="foot__item"><a href="" class="foot__link">Next</a></li>
+    </ul>
+  </header>
+  <div class="interested">
+    <div class="interested__title">
+      <p class="interested__label">MORE THAN <span class="interested__label--accent">GAMING!</span></p>
+      <p class="interested__descr">This also made for people who are interested in...</p>
+    </div>
+    <div class="interested__block">
+      <div class="interested__card">
+        <img
+          src="images/vc1.png"
+          alt="education logo"
+          class="interested__img"
+        >
+        <p class="interested__name">education</p>
+        <p class="interested__text">
+          Create aducational simulations,<br>
+          trainings and much more with <br>
+          unlimited virtual space and <br>
+          minimum physical space
+        </p>
+      </div>
+      <div class="interested__card">
+        <img
+          src="images/vc2.png"
+          alt="real estate logo"
+          class="interested__img"
+        >
+        <p class="interested__name">real estate</p>
+        <p class="interested__text">
+          Desighn architectural projects<br>
+          in a deeply realistic environment<br>
+          allowing visitors to freely walk<br>
+          around, and feel their vibe
+        </p>
+      </div>
+      <div class="interested__card">
+        <img
+          src="images/vc3.png"
+          alt="fitness logo"
+          class="interested__img"
+        >
+        <p class="interested__name">fitness</p>
+        <p class="interested__text">
+          Combine business with <br>
+          pleasure, and discover countless<br>
+          ways to stay fit while playing<br>
+          your favorite VR Games!
+        </p>
+      </div>
+      <div class="interested__card">
+        <img
+          src="images/vc4.png"
+          alt="social interactions logo"
+          class="interested__img"
+        >
+        <p class="interested__name">social interactions</p>
+        <p class="interested__text">
+          Hang out with your friends in<br>
+          the virtual world when you can’t<br>
+          meet space requirements
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="about">
+    <div class="about__title">
+      <div class="about__box">
+        <p class="about__name">About <span class="about__name--accent">product</span></p>
+        <p class="about__text">KAT loco is a foot-based VR locomotion system that gives complete physical<br>
+          control over lower-body actions, allowing you to freely walk, run, and carry out<br>
+          just any other movement in virtual reality.</p>
+      </div>
+      <button class="button__play">Play Video</button>
+    </div>
+    <div class="about__vr">
+      <div class="vr__left">
+        <p class="left__par">Uniwersally<br>compatible</p>
+        <p class="left__par">User friendly<br> hardware</p>
+        <p class="left__par">Complete SDK <br>for Developers</p>
+      </div>
+      <div class="vr__center">
+        <img
+          src="images/aboutt.png"
+          alt="photo of vr"
+          class="vr__img"
+        >
+      </div>
+      <div class="vr__right">
+        <p class="right__par">Complete<br> locomotion system</p>
+        <p class="right__par">Smart wireless<br> sensor</p>
+        <p class="right__par">Multifunctional<br> software</p>
+      </div>
+    </div>
+    <div class="about__kat">
+      <img
+        src="images/nice.png"
+        alt="person who game VR"
+        class="nice__img"
+      >
+      <div class="about__nice">
+        <p class="nice__hello">Hello,</p>
+        <p class="nice__title">Nice to meet <span class="nice__title--accent">you!</span></p>
+        <p class="nice__text">KAT VR is an independent company dedicated to the research,<br>
+          development, and sales of VR Locomotion products and solutions.<br>
+          Founded in 2013, we have quickly grown to become one of the<br>
+          world’s leading professional suppliers of VR games’ & simulations’<br>
+          equipment</p>
+      </div>
+    </div>
+  </div>
+  <div class="tech">
+    <p class="tech__label"> Tech <span class="tech__label--accent"> specs </span>
+    </p>
+    <div class="tech__block">
+      <div class="tech__card">
+        <img
+          src="images/tech.png"
+          alt="logo for tech block"
+          class="tech__img"
+        >
+        <p class="tech__name">batteries</p>
+        <p class="tech__text">Type: Lthium-lon polymer batteries <br>
+          Capacity: 370mAh <br>
+          Battery life: 10h of continuous use 150 <br>
+          hours on stand by <br>
+          Charging: Fast charging - 1 hour <br>
+          Charging voltage and current: 5V = 0.5A
+        </p>
+      </div>
+      <div class="tech__card">
+        <img
+          src="images/tech.png"
+          alt="logo for tech block"
+          class="tech__img"
+        >
+        <p class="tech__name">sensor</p>
+        <p class="tech__text">Weight: 35g/1.23oz each <br>
+          Dimension: 50mm/1.97in (diameter)* <br>
+          24mm/0.94in <br>
+          Light: LED lights
+        </p>
+      </div>
+      <div class="tech__card">
+        <img
+          src="images/tech.png"
+          alt="logo for tech block"
+          class="tech__img"
+        >
+        <p class="tech__name">connection</p>
+        <p class="tech__text">Wireless: Bluetooth 4.2<br>
+          Signal range: 5m <br>
+          Receiver: USB 2.0 and above
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="benefit">
+    <div class="benefit__content">
+      <p class="benefit__label">our <span class="benefit__label--accent">benefits</span></p>
+      <div class="benefit__block">
+        <span class="benefit__numb">1</span>
+        <p class="benefit__name">SUPER DURABLE BATTERIES</p>
+        <p class="benefit__text">for enhanced convenience</p>
+      </div>
+      <div class="benefit__block">
+        <span class="benefit__numb">2</span>
+        <p class="benefit__name">INDEPENDENT HEAD AND BODY TRACKING</p>
+        <p class="benefit__text">for increased realism</p>
+      </div>
+      <div class="benefit__block">
+        <span class="benefit__numb">3</span>
+        <p class="benefit__name">PC/VR INTEGRATED CONTROL PANEL</p>
+        <p class="benefit__text">for ultimate user experience</p>
+      </div>
+      <button class="benefit__button">Buy Now</button>
+    </div>
+    <img
+      src="images/benefit.png"
+      alt="photo of vr"
+      class="benefit__img"
+    >
+  </div>
+  <div class="contact">
+    <form action=""  class="contact__form" >
+      <input
+        class="contact__input"
+        type="text"
+        placeholder="Name*"
+      >
+      <input
+        class="contact__input"
+        type="email"
+        placeholder="Email*"
+      >
+      <input
+        class="contact__input"
+        type="phone"
+        placeholder="Phone*"
+      >
+      <input
+        class="contact__input"
+        type="textarea"
+        placeholder="Message*"
+      >
+    </form>
+    <div class="info">
+      <p class="info__top">Have any questions?</p>
+      <p class="info__title">GET IN <span class="info__title--accent">TOUCH</span></p>
+      <p class="info__text">Our manager will reply you within 15<br> minutes</p>
+      <a class="info__text" href="tel:+86-0571-86105373">+86-0571-86105373</a>
+      <a class="info__text" href="mailto:global@katvr.com">global@katvr.com</a>
+      <a class="info__text" href="mailto:overseas@katvr.com">overseas@katvr.com</a>
+      <button class="info__button">Contact Us</button>
+    </div>
+  </div>
+  <footer class="footer">
+    <img
+      src="images/logo.png"
+      alt=""
+    >
+    <ul class="footer__list">
+      <li class="footer__item"> <a href="" class="footer__link">Home </a></li>
+      <li class="footer__item"> <a href="" class="footer__link">About </a></li>
+      <li class="footer__item"> <a href="" class="footer__link">Tech </a></li>
+      <li class="footer__item"> <a href="" class="footer__link">Benefits </a></li>
+      <li class="footer__item"> <a href="" class="footer__link">Contact </a></li>
+    </ul>
+    <div class="footer__logos">
+      <a href="https://www.facebook.com/" target="_blank"><img
+        src="images/fb.png"
+        alt="logo fb"
+        class="footer__logo"
+      ></a>
+      <a href="https://twitter.com/" target="_blank"><img
+        src="images/tw.png"
+        alt="logo twitter"
+        class="footer__logo"
+      ></a>
+      <a href="https://www.youtube.com/" target="_blank"><img
+        src="images/you.png"
+        alt="logo youtube"
+        class="footer__logo"
+      ></a>
+      <a href="" target="_blank"><img
+        src="images/ls.png"
+        alt="logo"
+        class="footer__logo"
+      ></a>
+    </div>
+
+  </footer>
+  <script type="text/javascript" src="scripts/main.js"></script>
+</body>
+
 </html>

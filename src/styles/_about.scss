@@ -1,0 +1,104 @@
+.about {
+  padding: 5% 10%;
+  overflow: hidden;
+  height: 1443px;
+  background: linear-gradient(143.64deg, #191536 -0.5%, #000 99.5%);
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__name {
+    @extend %title;
+    &--accent {
+      @extend %title-accent;
+    }
+  }
+  &__text {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    color: #929292;
+  }
+  &__kat {
+    position: relative;
+    top: -600px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.vr__center {
+  background-image: url(../images/about.png);
+  background-size: contain;
+  width: 515px;
+  height: 463px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 50%;
+  top: -400px;
+  transform: translate(-50%);
+}
+
+.vr__left {
+  color: #fff;
+  font-family: "Balsamiq Sans", sans-serif;
+  position: relative;
+  left: 12%;
+  top: 120px;
+}
+
+.vr__right {
+  color: #fff;
+  font-family: "Balsamiq Sans", sans-serif;
+  position: relative;
+  left: 78%;
+  top: -825px;
+}
+
+.left__par {
+  margin-bottom: 115px;
+}
+
+.right__par {
+  margin-bottom: 115px;
+}
+
+.nice__hello {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: #05c2df;
+  position: relative;
+  right: 2%;
+}
+
+.nice__title {
+  @extend %title;
+  &--accent {
+    @extend %title-accent;
+  }
+}
+
+.nice__text {
+  font-size: 16px;
+  line-height: 150%;
+  color: #929292;
+  font-family: "Balsamiq Sans", sans-serif;
+}
+
+.vr__img {
+  transition: 2s;
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+
+.nice__img {
+  transition: 2s;
+  &:hover {
+    transform: scale(1.2);
+  }
+}

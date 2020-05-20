@@ -1,0 +1,47 @@
+.tech {
+  padding: 0 10%;
+  height: 690px;
+  background: #05040b;
+  overflow: hidden;
+  &__block {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+  }
+
+  &__label {
+    @extend %title;
+
+    margin-top: 100px;
+
+    &--accent {
+      @extend %title-accent;
+    }
+  }
+
+  &__name {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 23px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__text {
+    font-family: "Balsamiq Sans", sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    color: #929292;
+  }
+
+  &__img {
+    position: relative;
+    left: 25%;
+    transition: 2s;
+    &:hover {
+      transform: scale(1.4);
+    }
+  }
+}

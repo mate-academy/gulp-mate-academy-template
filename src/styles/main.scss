@@ -1,7 +1,65 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "header";
+@import "interested";
+@import "about";
+@import "tech";
+@import "benefit";
+@import "contact";
 
-body {
-  background: $c-gray;
+body,
+html,
+li,
+ul,
+div {
+  margin: 0;
+}
+
+.body {
+  background: #05040b;
+}
+
+button {
+  cursor: pointer;
+  transition: 1s;
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 2px 2px 50px 2px rgba(161,240,242,0.45);
+  }
+}
+
+.footer {
+  height: 100px;
+  background: #000;
+  padding: 0 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__list {
+    display: flex;
+    list-style: none;
+    color: #f2f2f2;
+    padding: 0;
+    position: relative;
+    width: 380px;
+    justify-content: space-between;
+  }
+
+  &__link {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-family: "Balsamiq Sans", sans-serif;
+    transition: 2s;
+    font-size: 16px;
+    &:hover {
+      position: relative;
+      color: #05c2df;
+      text-shadow: 2px 0 10px #fff;
+    }
+  }
+
+  &__logo {
+    margin-right: 15px;
+  }
 }
