@@ -1,13 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.css">
-  </head>
-  <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
-  </body>
+
+<head>
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AirBnB</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="#">
+        <img class="header__logo" src="./images/Rectangle 2.jpg" alt="Logo AirBnB">
+      </a>
+      <input class="header__toggler" type="checkbox" id="header__toggler">
+      <label class="header__label" for="header__toggler"></label>
+      <nav class="header__nav">
+        <a class="header__link" href="#hosted">
+          Become a host
+        </a>
+        <a class="header__link" href="#reviews">
+          Trips
+        </a>
+        <a class="header__link" href="#">
+          Messages
+        </a>
+      </nav>
+      <a href="#">
+        <img class="header__photo" src="./images/Ellipse.jpg" alt="User Photo">
+      </a>
+    </div>
+  </header>
+
+  <section class="promo">
+  </section>
+
+  <main class="content">
+    <form class="booking-form" action="" method="POST">
+      <p class="booking-form__price">25$ per night</p>
+      <input class="booking-form__input" placeholder="Date" onfocus="(type='date')">
+      <input class="booking-form__input" placeholder="Guests" type="number">
+      <button class="booking-form__button" type="submit">Book</button>
+    </form>
+
+    <h1 class="content__primary-title">Quiet apartment</h1>
+    <p class="content__subtitle">Entire apartment</p>
+    <p class="content__condition">4 guests</p>
+    <p class="content__condition">1 bed</p>
+    <p class="content__condition">1 bath</p>
+
+    <p class="content__description">City Apartment is newly renovated in the hear
+      t of Budapest, right in the city center. Lor
+      em ipsum dolor sit amet, consectetur adipi
+      scing elit, sed do eiusmod tempor incid
+      idunt ut labore et dolore magna aliqua. Ut en
+      im ad minim veniam.
+    </p>
+
+    <a class="content__links" href="">
+      Contact host
+    </a>
+
+    <div class="content__amenities amenities">
+      <h3>Amenities</h3>
+      <p class="amenities__amenity">
+        Elevator
+      </p>
+      <p class="amenities__amenity">
+        Hair dryer
+      </p><br>
+      <p class="amenities__amenity">
+        Washer
+      </p>
+      <p class="amenities__amenity">
+        Kitchen
+      </p><br>
+      <a class="content__links" href="">
+        Show All Amenities
+      </a>
+    </div>
+
+    <div class="reviews content__reviews" id="reviews">
+      <h2 class="reviews__title">
+        Reviews
+      </h2>
+      <article class="reviews__block">
+        <div class="reviews__container">
+          <p class="reviews__circle"></p>
+          <div class="reviews__subcontainer">
+            <p class="reviews__name">
+              John
+            </p>
+            <p class="reviews__date">
+              September 2016
+            </p>
+          </div>
+        </div>
+        <p class="reviews__review">
+          Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore
+          et dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </article>
+
+      <article class="reviews__block">
+        <div class="reviews__container">
+          <p class="reviews__circle"></p>
+          <div class="reviews__subcontainer">
+            <p class="reviews__name">
+              John
+            </p>
+            <p class="reviews__date">
+              September 2017
+            </p>
+          </div>
+        </div>
+        <p class="reviews__review">
+          Sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam.
+        </p>
+      </article>
+    </div>
+
+    <article class="hosted content__hosted" id="hosted">
+      <h2 class="hosted__title">Hosted by Jane</h2>
+      <p class="hosted__were">Budapest, Hungary</p>
+      <p class="hosted__article">
+        Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit, sed do eiusmod tempor incididunt ut labore
+        et magna aliqua.
+      </p>
+      <button class="hosted__button">
+        Contact host
+      </button>
+    </article>
+
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="footer__container">
+      <div class="footer__subcontainer">
+        <h3 class="footer__title">Airbnb</h3>
+        <a class="footer__link" href="">About</a>
+        <a class="footer__link" href="">Press</a>
+        <a class="footer__link" href="">Help</a>
+      </div>
+      <div class="footer__subcontainer">
+        <h3 class="footer__title">Discover</h3>
+        <a class="footer__link" href="">Travel credit</a>
+        <a class="footer__link" href="">Business</a>
+        <a class="footer__link" href="">Guidebooks</a>
+      </div>
+      <div class="footer__subcontainer">
+        <h3 class="footer__title">Hosting</h3>
+        <a class="footer__link" href="">Why host</a>
+        <a class="footer__link" href="">Hospitality</a>
+        <a class="footer__link" href="">Community</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
 </html>

@@ -1,0 +1,47 @@
+
+.reviews {
+ 
+  &__title {
+    font-size: 28px;
+    line-height: 33px;
+    margin-bottom: 34px;
+  }
+
+  &__circle {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #c4c4c4;
+    margin: 0 20px 0 0;
+  }
+
+  &__name {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &__date {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__subcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__review {
+    width: 490px;
+    height: 120px;
+    margin: 13px 0 0;
+    
+    @media screen and (max-width: 490px) {
+      width: 100%;
+    }
+  }
+}
