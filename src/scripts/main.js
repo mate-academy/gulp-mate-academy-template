@@ -30,6 +30,7 @@ checkBtn.addEventListener('click', e => {
     <span class="green">${checkResult.full}</span> 
     <span class="yellow">${checkResult.partial}</span></li>`);
 
+  input.value = '';
   window.console.log(randomNum);
 });
 
