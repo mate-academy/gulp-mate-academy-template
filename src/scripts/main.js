@@ -26,7 +26,7 @@ checkBtn.addEventListener('click', e => {
     window.alert('Сongratulations!');
   }
 
-  attemptsList.insertAdjacentHTML('beforeend', `<li>${input.value} 
+  attemptsList.insertAdjacentHTML('afterbegin', `<li>${input.value} 
     <span class="green">${checkResult.full}</span> 
     <span class="yellow">${checkResult.partial}</span></li>`);
 
