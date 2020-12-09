@@ -9,6 +9,21 @@ body {
   background-size: cover;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: 5px 5px 5px -5px rgba(60, 60, 60, 0.3) inset;
+  background-color: #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 4px;
+  box-shadow: 5px 5px 5px -5px rgba(60, 60, 60, 0.3);
+}
+
 h1 {
   margin: 0;
   text-align: center;
@@ -31,9 +46,10 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  min-height: 500px;
+  height: 500px;
   width: 100%;
   max-width: 400px;
+  overflow-y: auto;
   background-color: #f5f5f5;
   border-radius: 10px;
   box-shadow: 2px 2px 10px 2px rgba($color: #333, $alpha: 0.8);
