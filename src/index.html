@@ -3,11 +3,37 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Bulls and cows</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
+
   <body>
-    <h1>Hello Mate Academy</h1>
+    <main class="main">
+      <article class="content">
+        <h1>Bulls and cows</h1>
+
+        <form class="content__form" action="">
+          <input
+            id="input-num"
+            class="content__input"
+            type="number"
+            placeholder="* * * *"
+            required
+          >
+          <button id="check-btn" class="content__button">Check</button>
+        </form>
+
+        <ol
+          id="attempts-list"
+          class="content__list"
+          reversed
+        >
+        </ol>
+      </article>
+    </main>
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
