@@ -3,11 +3,33 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Быки и коровы</title>
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
+
   <body>
-    <h1>Hello Mate Academy</h1>
+    <main class="main">
+      <article class="container">
+        <h1>Быки и коровы</h1>
+
+        <input
+          id="input-num"
+          min="0000"
+          max="9999"
+          minlength="4"
+          maxlength="4"
+          type="number"
+          required
+        >
+        <button id="check-btn">проверить</button>
+
+        <div id="our-number"></div>
+        <div id="secret-number"></div>
+
+        <ul id="attempts"></ul>
+      </article>
+    </main>
+
     <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
