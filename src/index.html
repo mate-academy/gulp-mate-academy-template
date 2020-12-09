@@ -3,30 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Быки и коровы</title>
+    <title>Bulls and cows</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.scss">
   </head>
 
   <body>
     <main class="main">
-      <article class="container">
-        <h1>Быки и коровы</h1>
+      <article class="content">
+        <h1>Bulls and cows</h1>
 
-        <input
-          id="input-num"
-          min="0000"
-          max="9999"
-          minlength="4"
-          maxlength="4"
-          type="number"
-          required
-        >
-        <button id="check-btn">проверить</button>
+        <form class="content__form" action="">
+          <input
+            id="input-num"
+            class="content__input"
+            type="number"
+            required
+          >
+          <button id="check-btn" class="content__button">Check</button>
+        </form>
 
-        <div id="our-number"></div>
-        <div id="secret-number"></div>
-
-        <ul id="attempts"></ul>
+        <ol id="attempts-list" class="content__list"></ol>
       </article>
     </main>
 
