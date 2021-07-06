@@ -1,0 +1,130 @@
+@import "utils";
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  box-sizing: border-box;
+  padding: 40px 135px;
+
+  position: relative;
+  top: -50px;
+
+  background: url(../images/header/header-back.png) no-repeat left top;
+  background-size: cover;
+
+  width: 100%;
+
+  &__part {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-top: 20px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 121px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: 150px;
+    width: 34%;
+  }
+
+  &__row {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: space-between;
+  }
+
+  &__icon-cont {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width:1600px) {
+  .footer {
+    padding-left: calc(50% - 575px);
+    padding-right: calc(50% - 575px);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .footer {
+    padding: 20px 50px;
+
+    &__part {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      justify-content: left;
+    }
+
+    &__container {
+      padding-top: 20px;
+      flex-direction: column;
+    }
+
+    &__left {
+      width: 100%;
+      margin-bottom: 35px;
+      margin-top: 20px;
+    }
+
+    &__right {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+  }
+}
+
+@media screen and (max-width:650px) {
+  .footer {
+    align-items: center;
+
+    &__row {
+      width: 50%;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__wrap {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+  }
+}

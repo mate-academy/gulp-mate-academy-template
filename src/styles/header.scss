@@ -1,0 +1,31 @@
+@import "utils";
+
+.header {
+  background: url(../images/header/header-back.png) no-repeat left top;
+  padding: 30px 144px 150px;
+  background-size: 80% 60%;
+
+  overflow: hidden;
+
+  height: 640px;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .header {
+    height: auto;
+    padding: 30px 5%;
+  }
+}
+
+@media screen and (min-width:1600px) {
+  .header {
+    padding-left: calc(50% - 575px);
+    padding-right: calc(50% - 575px);
+  }
+}

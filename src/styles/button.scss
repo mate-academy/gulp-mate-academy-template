@@ -1,0 +1,68 @@
+@import "utils";
+
+.submit-button {
+  cursor: pointer;
+
+  width: 30%;
+  border: none;
+  border-bottom: 1px dotted $h-color;
+
+  color: $h-color;
+  background-color: $header-bg-color;
+  transition: color 1s;
+
+  &:hover {
+    color: $logo-sec-color;
+  }
+
+  &:active {
+    color: $logo-sec-color;
+  }
+}
+
+.button {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 240px;
+  height: 50px;
+  box-sizing: border-box;
+  margin-right: 80px;
+
+  border: 1px solid $logo-sec-color;
+  outline: none;
+  background-color: $bg-color;
+
+  transition: transform 0.5s, color 0.5s, background-color 1s;
+
+  &__arrow {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 5px $but-shadow;
+    color: $logo-sec-color;
+  }
+
+  &:active {
+    box-shadow: 2px 2px 5px $but-shadow;
+    background-color: $button-ativ-col;
+  }
+}
+
+@media screen and (max-width:850px) {
+  .button {
+    width: 90%;
+    margin-right: 0;
+    background-color: $header-bg-color;
+  }
+}
+
+@media screen and (max-width:550px) {
+  .button {
+    margin: 20px 0;
+  }
+}

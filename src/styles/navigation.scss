@@ -1,0 +1,124 @@
+@import "utils";
+
+.nav {
+  overflow-x: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 90px;
+  overflow: hidden;
+
+  &__mobile {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 34%;
+    min-width: 450px;
+  }
+
+  &__item {
+    display: inline-block;
+  }
+
+  &__link {
+    color: #4f4f4f;
+    transition: color 1s;
+
+    &:hover {
+      color: hsl(190, 96%, 32%);
+    }
+  }
+}
+
+.nav__mobile-button,
+.nav__mobile-close,
+.nav__item:first-child {
+  display: none;
+}
+
+@media screen and (max-width: 999px) {
+  .nav {
+    align-items: flex-start;
+    justify-content: space-between;
+    overflow: hidden;
+
+    &__mobile-button {
+      display: block;
+      position: absolute;
+      top: 30px;
+      right: 5%;
+    }
+
+    &__bag {
+      display: none;
+    }
+
+    &__list {
+
+      position: absolute;
+      top: -130%;
+      right: 0;
+      z-index: 2;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      background: $logo-sec-color;
+
+      height: 450px;
+      min-width: 230px;
+      padding-top: 70px;
+
+      transition: top 1s;
+    }
+
+    &__link {
+      color: white;
+    }
+
+    &__item {
+      margin-top: 30px;
+    }
+  }
+
+  .nav--is-active {
+    .nav {
+      align-items: space-between;
+      justify-content: flex-start;
+
+      &__list {
+        transition: top 1s;
+        top: -20px;
+        right: 0;
+      }
+
+      &__item {
+        &:first-child {
+          display: block;
+        }
+      }
+
+      &__mobile-button {
+        display: none;
+      }
+
+      &__mobile-close {
+        display: inline-block;
+        transform: rotate(-90deg);
+        transform-origin: bottom;
+
+        position: absolute;
+        bottom: 110px;
+        right: -50px;
+
+        color: $bg-color;
+
+      }
+    }
+  }
+}

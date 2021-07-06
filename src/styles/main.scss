@@ -1,7 +1,27 @@
 @import "utils";
 @import "fonts";
 @import "typography";
+@import "reset.scss";
+@import "logo.scss";
+@import "header.scss";
+@import "header-content.scss";
+@import "navigation.scss";
+@import "button.scss";
+@import "description.scss";
+@import "features.scss";
+@import "team.scss";
+@import "materials.scss";
+@import "potr-size.scss";
+@import "extra.scss";
+@import "form.scss";
+@import "footer.scss";
 
 body {
-  background: $c-gray;
+  background: $bg-color;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
