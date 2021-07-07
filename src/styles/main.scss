@@ -3,5 +3,127 @@
 @import "typography";
 
 body {
-  background: $c-gray;
+  background: $c-board;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  font-family: "LeoHand", sans-serif;
+  color: white;
+  font-size: 90px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 810px;
+  width: 600px;
+  align-self: center;
+  background-image: url(./../images/board.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: auto;
+}
+
+.feild {
+  display: grid;
+  grid-template: repeat(3, 160px)/repeat(3, 160px);
+  transform: skewX(-10deg) ;
+  align-self: center;
+  margin: auto;
+}
+
+.cell {
+  position: relative;
+  text-align: center;
+}
+
+.cell_1,
+.cell_2,
+.cell_4,
+.cell_5,
+.cell_3,
+.cell_6 {
+  border-bottom: 10px solid white;
+}
+
+.cell_1,
+.cell_2,
+.cell_4,
+.cell_5,
+.cell_7,
+.cell_8 {
+  border-right: 10px solid white;
+}
+
+.btn {
+  height: 100px;
+  background: none ;
+  color: white;
+  font-size: 90px;
+  margin-bottom: 100px;
+  justify-self: end;
+  font-family: "Blitz-Script", "LeoHand", sans-serif;
+  border-style: none;
+  outline: none;
+  transition: all 0.3s ease;
+  &:hover {
+    font-size: 95px;
+  }
+}
+
+hr {
+  width: 480px;
+  height: 5px;
+  background-color: white;
+  margin: 0;
+}
+
+.horisontal {
+  position: absolute;
+  top: 50%;
+  width: 480px;
+  align-self: center;
+
+}
+
+.crossed1_9 {
+  position: absolute;
+  width: 665px;
+  transform: rotate(45deg);
+  transform-origin: left top 0;
+}
+
+.crossed3_7 {
+  position: absolute;
+  right: 15px;
+  width: 665px;
+  transform: rotate(-45deg);
+  transform-origin: right top 0;
+}
+
+.vertical {
+  position: absolute;
+  width: 480px;
+  left: 50%;
+  transform: rotate(90deg);
+  transform-origin: left top 0;
+}
+
+.message {
+  position: absolute;
+  width: 100%;
+  top: 100px;
+  margin: auto;
+  text-align: center;
+}
+
+.emoticon {
+  background-image: url(../images/emoticon1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 400px;
+  height: 400px;
+  margin: auto;
 }
